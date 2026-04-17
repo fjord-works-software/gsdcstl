@@ -1,0 +1,11 @@
+Sitemap: http://www.gsdcstl.org/sitemap.xml
+User-agent: *
+Disallow: /cgi-bin/
+Disallow: /scripts/
+Disallow: /tmp/
+Disallow: /html/
+Disallow: VertNavBar1.html
+Disallow: VertNavBar2.html
+Disallow: EndNavMenu.html
+Disallow: EndNavMenu2.html
+Disallow: TESTIndex.html
