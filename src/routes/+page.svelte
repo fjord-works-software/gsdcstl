@@ -1,8 +1,12 @@
+<script lang="ts">
+	import PageHeader from '$lib/components/PageHeader.svelte';
+</script>
+
 <svelte:head>
 	<title>German Shepherd Dog Club of St. Louis</title>
 </svelte:head>
 
-<h1 class="text-2xl font-serif font-bold text-primary mb-4">About Us</h1>
+<PageHeader title="About Us" />
 
 <p class="mb-4">
 	The members of the German Shepherd Dog Club of St. Louis, Inc. would like to introduce ourselves

@@ -1,8 +1,12 @@
+<script lang="ts">
+	import PageHeader from '$lib/components/PageHeader.svelte';
+</script>
+
 <svelte:head>
 	<title>Show Premium — GSDCSTL</title>
 </svelte:head>
 
-<h1 class="text-2xl font-serif font-bold text-primary mb-4">Show Premium</h1>
+<PageHeader title="Show Premium" />
 
 <div class="bg-primary-light/10 border border-primary-light rounded p-4 mb-6 text-sm text-gray-700">
 	<p class="font-semibold text-primary-dark mb-1">⚠ Venue Change</p>

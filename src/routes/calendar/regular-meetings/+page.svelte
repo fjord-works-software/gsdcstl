@@ -1,8 +1,12 @@
+<script lang="ts">
+	import PageHeader from '$lib/components/PageHeader.svelte';
+</script>
+
 <svelte:head>
 	<title>Regular Meetings — GSDCSTL</title>
 </svelte:head>
 
-<h1 class="text-2xl font-serif font-bold text-primary mb-4">Regular GSDCSTL Meetings</h1>
+<PageHeader title="Regular GSDCSTL Meetings" />
 
 <ul class="space-y-3 text-gray-700 mb-6">
 	<li>

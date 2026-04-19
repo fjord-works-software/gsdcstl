@@ -1,8 +1,12 @@
+<script lang="ts">
+	import PageHeader from '$lib/components/PageHeader.svelte';
+</script>
+
 <svelte:head>
 	<title>Stud Dogs — GSDCSTL</title>
 </svelte:head>
 
-<h1 class="text-2xl font-serif font-bold text-primary mb-6">Stud Dogs</h1>
+<PageHeader title="Stud Dogs" />
 
 <div class="space-y-8">
 

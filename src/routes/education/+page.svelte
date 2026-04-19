@@ -1,9 +1,12 @@
+<script lang="ts">
+	import PageHeader from '$lib/components/PageHeader.svelte';
+</script>
+
 <svelte:head>
 	<title>Education — GSDCSTL</title>
 </svelte:head>
 
-<h1 class="text-2xl font-serif font-bold text-primary mb-2">Education</h1>
-<p class="text-gray-500 text-sm mb-6">AKC German Shepherd Dog Breed Standard — Adopted May 1968, Revised February 1978</p>
+<PageHeader title="Education" subtitle="AKC German Shepherd Dog Breed Standard — Adopted May 1968, Revised February 1978" />
 
 <div class="prose max-w-none text-gray-700 space-y-4">
 

@@ -1,8 +1,12 @@
+<script lang="ts">
+	import PageHeader from '$lib/components/PageHeader.svelte';
+</script>
+
 <svelte:head>
 	<title>Web Award — GSDCSTL</title>
 </svelte:head>
 
-<h1 class="text-2xl font-serif font-bold text-primary mb-4">Web Award</h1>
+<PageHeader title="Web Award" />
 
 <h2 class="text-base font-serif font-semibold text-primary-dark mb-3">2013 GSDCA Regional Club Website Competition</h2>
 <ol class="list-decimal pl-6 space-y-1 text-gray-700">

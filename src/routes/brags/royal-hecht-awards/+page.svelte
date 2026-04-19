@@ -1,4 +1,5 @@
 <script lang="ts">
+	import PageHeader from '$lib/components/PageHeader.svelte';
 	import awards from '$lib/data/royal-hecht-awards.json';
 	const years = awards.map((a) => a.year).sort((a, b) => b - a);
 </script>
@@ -7,8 +8,10 @@
 	<title>Royal Hecht Awards — GSDCSTL</title>
 </svelte:head>
 
-<h1 class="text-2xl font-serif font-bold text-primary mb-2">Royal Hecht Member Awards</h1>
-<p class="text-gray-600 mb-6">Annual member achievement awards presented by the GSDC of St. Louis.</p>
+<PageHeader
+	title="Royal Hecht Member Awards"
+	subtitle="Annual member achievement awards presented by the GSDC of St. Louis."
+/>
 
 <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-2 mb-10">
 	{#each years as year}

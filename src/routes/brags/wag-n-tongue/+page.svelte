@@ -1,4 +1,5 @@
 <script lang="ts">
+	import PageHeader from '$lib/components/PageHeader.svelte';
 	const newsletters = [
 		{ label: 'January 2018', file: 'January 2018 wag.pdf' },
 		{ label: 'August 2017', file: 'August 2017 wag.pdf' },
@@ -67,8 +68,7 @@
 	<title>Wag 'N' Tongue — GSDCSTL</title>
 </svelte:head>
 
-<h1 class="text-2xl font-serif font-bold text-primary mb-2">Wag 'N' Tongue</h1>
-<p class="text-gray-500 text-sm mb-6">Club newsletter archive — 1986 to 2018</p>
+<PageHeader title="Wag 'N' Tongue" subtitle="Club newsletter archive — 1986 to 2018" />
 
 <ul class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-2 text-sm">
 	{#each newsletters as n}

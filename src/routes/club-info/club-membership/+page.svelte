@@ -1,8 +1,12 @@
+<script lang="ts">
+	import PageHeader from '$lib/components/PageHeader.svelte';
+</script>
+
 <svelte:head>
 	<title>Club Membership — GSDCSTL</title>
 </svelte:head>
 
-<h1 class="text-2xl font-serif font-bold text-primary mb-4">How to Join</h1>
+<PageHeader title="How to Join" />
 
 <p class="text-gray-700 mb-4">
 	We welcome anyone interested in the German Shepherd Dog. To become a member of the German Shepherd

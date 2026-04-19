@@ -1,8 +1,12 @@
+<script lang="ts">
+	import PageHeader from '$lib/components/PageHeader.svelte';
+</script>
+
 <svelte:head>
 	<title>Veterinary Links — GSDCSTL</title>
 </svelte:head>
 
-<h1 class="text-2xl font-serif font-bold text-primary mb-6">Useful Veterinary & Medical Links</h1>
+<PageHeader title="Useful Veterinary & Medical Links" />
 
 <div class="space-y-8 text-sm">
 

@@ -1,9 +1,12 @@
+<script lang="ts">
+	import PageHeader from '$lib/components/PageHeader.svelte';
+</script>
+
 <svelte:head>
 	<title>Rainbow Bridge — GSDCSTL</title>
 </svelte:head>
 
-<h1 class="text-2xl font-serif font-bold text-primary mb-2">Rainbow Bridge</h1>
-<p class="text-gray-500 text-sm mb-6 italic">In memory of our beloved German Shepherds</p>
+<PageHeader title="Rainbow Bridge" subtitle="In memory of our beloved German Shepherds" />
 
 <div class="space-y-6 text-sm text-gray-700">
 
