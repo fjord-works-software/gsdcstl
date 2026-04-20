@@ -90,6 +90,7 @@
 	</div>
 
 	<div>
+		<img src="/images/baretta-wb-bow-april-6-7-19.jpg" alt="Baretta" class="max-w-xs rounded shadow mb-3" />
 		<h3 class="font-semibold text-primary-dark">Baretta</h3>
 		<p class="text-sm text-gray-700 mt-1">
 			4/7/2019 — Back to back Winners Bitch &amp; Best of Winners for Baretta this weekend!
@@ -106,6 +107,7 @@
 	</div>
 
 	<div>
+		<img src="/images/hazel-group-two-april-6-19.jpg" alt="Hazel" class="max-w-xs rounded shadow mb-3" />
 		<h3 class="font-semibold text-primary-dark">
 			Group Placing Can. Sel. BOF RMB MBISS BPIS MBPISS CH Forest Knolls Hazelnut V Winsome — "Hazel"
 		</h3>
