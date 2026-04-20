@@ -40,7 +40,47 @@
 		<ul transition:slide={{ duration: 200 }} class="border-t border-primary">
 			{#each navItems as item}
 				<li class="border-b border-primary last:border-b-0">
-					{#if item.href}
+					{#if item.href && item.children}
+						<div class="flex items-stretch">
+							<a
+								href={item.href}
+								onclick={close}
+								class="flex-1 px-4 py-2.5 text-white text-sm hover:bg-primary"
+							>
+								{item.label}
+							</a>
+							<button
+								onclick={() => toggle(item.label)}
+								class="px-3 py-2.5 text-white hover:bg-primary border-l border-primary"
+								aria-label="Expand {item.label} submenu"
+							>
+								<svg
+									class="w-4 h-4 transition-transform"
+									class:rotate-180={expanded.has(item.label)}
+									fill="none"
+									stroke="currentColor"
+									viewBox="0 0 24 24"
+								>
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+								</svg>
+							</button>
+						</div>
+						{#if expanded.has(item.label)}
+							<ul transition:slide={{ duration: 150 }} class="bg-primary">
+								{#each item.children as child}
+									<li>
+										<a
+											href={child.href}
+											onclick={close}
+											class="block px-8 py-2 text-white text-sm hover:bg-primary-dark"
+										>
+											{child.label}
+										</a>
+									</li>
+								{/each}
+							</ul>
+						{/if}
+					{:else if item.href}
 						<a
 							href={item.href}
 							onclick={close}
