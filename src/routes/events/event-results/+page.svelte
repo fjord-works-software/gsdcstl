@@ -1,6 +1,22 @@
 <script lang="ts">
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import BragEntry from '$lib/components/BragEntry.svelte';
+	import PhotoGallery from '$lib/components/PhotoGallery.svelte';
+
+	const showPhotos = [
+		'/images/bruno-bob-gsdcstl-5.12.19.jpg',
+		'/images/sat-wd-von-loar.jpg',
+		'/images/sun-bob-faithrock-maverick.jpg',
+		'/images/sun-wb-luzak.jpg',
+		'/images/jackson-wd-bow-march19-futurity.jpg'
+	];
+	const showPhotoAlts = [
+		'Best of Breed — Bruno',
+		"Winner's Dog — Von Loar Red Rum Gomez",
+		"Sunday Best of Breed — Faithrock's Maverick",
+		"Winner's Bitch — Luzak's Jyn",
+		"Winner's Dog — Jackson"
+	];
 
 	const shows = [
 		{
@@ -71,3 +87,6 @@
 		<BragEntry show={s.show} judge={s.judge} placements={s.placements} />
 	{/each}
 </div>
+
+<h2 class="text-lg font-serif font-semibold text-primary-dark mt-8 mb-4">Photos</h2>
+<PhotoGallery images={showPhotos} alts={showPhotoAlts} />

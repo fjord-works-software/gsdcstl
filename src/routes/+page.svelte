@@ -1,10 +1,20 @@
 <script lang="ts">
 	import PageHeader from '$lib/components/PageHeader.svelte';
+	import Carousel from '$lib/components/Carousel.svelte';
+
+	const slides = [
+		{ src: '/images/slide790.jpg', alt: 'German Shepherd Dog Club of St. Louis' },
+		{ src: '/images/slide791.jpg', alt: 'German Shepherd Dog Club of St. Louis' }
+	];
 </script>
 
 <svelte:head>
 	<title>German Shepherd Dog Club of St. Louis</title>
 </svelte:head>
+
+<div class="-mx-6 -mt-8 mb-8 rounded-t-lg overflow-hidden">
+	<Carousel {slides} />
+</div>
 
 <PageHeader title="About Us" />
 
@@ -36,9 +46,21 @@
 
 <h2 class="text-lg font-serif font-semibold text-primary-dark mb-2">Useful Links</h2>
 <ul class="space-y-1">
-	<li><a href="https://www.akc.org" class="text-primary hover:underline">American Kennel Club (AKC)</a></li>
-	<li><a href="https://www.gsdca.org" class="text-primary hover:underline">German Shepherd Dog Club of America (GSDCA)</a></li>
-	<li><a href="https://www.offa.org" class="text-primary hover:underline">Orthopedic Foundation for Animals (OFA)</a></li>
+	<li>
+		<a href="https://www.akc.org" class="text-primary hover:underline"
+			>American Kennel Club (AKC)</a
+		>
+	</li>
+	<li>
+		<a href="https://www.gsdca.org" class="text-primary hover:underline"
+			>German Shepherd Dog Club of America (GSDCA)</a
+		>
+	</li>
+	<li>
+		<a href="https://www.offa.org" class="text-primary hover:underline"
+			>Orthopedic Foundation for Animals (OFA)</a
+		>
+	</li>
 	<li>
 		<a
 			href="https://www.facebook.com/German-Shepherd-Dog-Club-of-St-Louis-130909666994242/"
