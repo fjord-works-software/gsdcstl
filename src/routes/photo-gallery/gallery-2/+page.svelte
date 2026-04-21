@@ -1,25 +1,26 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import PhotoGallery from '$lib/components/PhotoGallery.svelte';
 
 	const images = [
-		'/images/gallery-2/03292013dannierocky.jpg',
-		'/images/gallery-2/03292013judyrocket.jpg',
-		'/images/gallery-2/03292013stevemayhem.jpg',
-		'/images/gallery-2/03292013judyteko.jpg',
-		'/images/gallery-2/03292013gaildarkknight.jpg',
-		'/images/gallery-2/03292013larryaquila.jpg',
-		'/images/gallery-2/03292013gailnick.jpg',
-		'/images/gallery-2/03292013stevejourney2.jpg',
-		'/images/gallery-2/03292013lianacaballo.jpg',
-		'/images/gallery-2/03292013steveandbutkus.jpg',
-		'/images/gallery-2/03292013elizabethandpeanut.jpg',
-		'/images/gallery-2/03292013roztopper.jpg',
-		'/images/gallery-2/03292013steveandflyer.jpg',
-		'/images/gallery-2/03292013lianagregfletcher.jpg',
-		'/images/gallery-2/03292013greggail.jpg',
-		'/images/gallery-2/03292013gailr.jpg',
-		'/images/gallery-2/03292013stevedingle.jpg'
+		`${base}/images/gallery-2/03292013dannierocky.jpg`,
+		`${base}/images/gallery-2/03292013judyrocket.jpg`,
+		`${base}/images/gallery-2/03292013stevemayhem.jpg`,
+		`${base}/images/gallery-2/03292013judyteko.jpg`,
+		`${base}/images/gallery-2/03292013gaildarkknight.jpg`,
+		`${base}/images/gallery-2/03292013larryaquila.jpg`,
+		`${base}/images/gallery-2/03292013gailnick.jpg`,
+		`${base}/images/gallery-2/03292013stevejourney2.jpg`,
+		`${base}/images/gallery-2/03292013lianacaballo.jpg`,
+		`${base}/images/gallery-2/03292013steveandbutkus.jpg`,
+		`${base}/images/gallery-2/03292013elizabethandpeanut.jpg`,
+		`${base}/images/gallery-2/03292013roztopper.jpg`,
+		`${base}/images/gallery-2/03292013steveandflyer.jpg`,
+		`${base}/images/gallery-2/03292013lianagregfletcher.jpg`,
+		`${base}/images/gallery-2/03292013greggail.jpg`,
+		`${base}/images/gallery-2/03292013gailr.jpg`,
+		`${base}/images/gallery-2/03292013stevedingle.jpg`
 	];
 
 	const alts = [

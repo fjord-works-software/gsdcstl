@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 </script>
 
@@ -24,12 +25,12 @@
 
 <div class="flex gap-4 flex-wrap">
 	<a
-		href="/Documents/GSDApplication.pdf"
+		href="{base}/Documents/GSDApplication.pdf"
 		class="inline-block bg-primary text-white px-4 py-2 rounded text-sm hover:bg-primary-dark transition-colors"
 	>
 		Download Application (PDF)
 	</a>
-	<a href="/club-info/constitution-by-laws" class="inline-block text-primary hover:underline text-sm py-2">
+	<a href="{base}/club-info/constitution-by-laws" class="inline-block text-primary hover:underline text-sm py-2">
 		View Constitution & By-Laws →
 	</a>
 </div>

@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { page } from '$app/stores';
+	import { base } from '$app/paths';
 	import { navItems } from '$lib/nav';
 
 	function isActive(href: string) {
-		return $page.url.pathname === href;
+		return $page.url.pathname === base + href;
 	}
 
 	function hasActiveChild(children: typeof navItems) {
@@ -17,7 +18,7 @@
 			<li class="relative group">
 				{#if item.href && item.children}
 					<a
-						href={item.href}
+						href="{base}{item.href}"
 						class="flex items-center gap-1 px-3 py-2.5 text-sm text-white hover:bg-primary transition-colors"
 						class:font-bold={isActive(item.href) || hasActiveChild(item.children)}
 					>
@@ -32,7 +33,7 @@
 						{#each item.children as child}
 							<li>
 								<a
-									href={child.href}
+									href="{base}{child.href}"
 									class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary hover:text-white transition-colors"
 									class:font-bold={child.href && isActive(child.href)}
 								>
@@ -43,7 +44,7 @@
 					</ul>
 				{:else if item.href}
 					<a
-						href={item.href}
+						href="{base}{item.href}"
 						class="block px-3 py-2.5 text-sm text-white hover:bg-primary transition-colors"
 						class:font-bold={isActive(item.href)}
 					>
@@ -68,7 +69,7 @@
 							{#each item.children as child}
 								<li>
 									<a
-										href={child.href}
+										href="{base}{child.href}"
 										class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary hover:text-white transition-colors"
 										class:font-bold={child.href && isActive(child.href)}
 									>

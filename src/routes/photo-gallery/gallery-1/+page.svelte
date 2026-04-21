@@ -1,24 +1,25 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import PhotoGallery from '$lib/components/PhotoGallery.svelte';
 
 	const images = [
-		'/images/gallery-1/rothandbellsaandt.jpg',
-		'/images/gallery-1/duncanandricosa.jpg',
-		'/images/gallery-1/beattieandvicsa.jpg',
-		'/images/gallery-1/monticelliand-onyxxsaandcs.jpg',
-		'/images/gallery-1/robertsonandamorsa.jpg',
-		'/images/gallery-1/wilsonandronjacs.jpg',
-		'/images/gallery-1/margulandmeikytanded.jpg',
-		'/images/gallery-1/beiltrota.jpg',
-		'/images/gallery-1/meikytrota.jpg',
-		'/images/gallery-1/onyxxtrota.jpg',
-		'/images/gallery-1/renotrota.jpg',
-		'/images/gallery-1/ricotrota.jpg',
-		'/images/gallery-1/ronjatrota.jpg',
-		'/images/gallery-1/victrota.jpg',
-		'/images/gallery-1/frazierposthumousforodin.jpg',
-		'/images/gallery-1/mofccarolmartina.jpg'
+		`${base}/images/gallery-1/rothandbellsaandt.jpg`,
+		`${base}/images/gallery-1/duncanandricosa.jpg`,
+		`${base}/images/gallery-1/beattieandvicsa.jpg`,
+		`${base}/images/gallery-1/monticelliand-onyxxsaandcs.jpg`,
+		`${base}/images/gallery-1/robertsonandamorsa.jpg`,
+		`${base}/images/gallery-1/wilsonandronjacs.jpg`,
+		`${base}/images/gallery-1/margulandmeikytanded.jpg`,
+		`${base}/images/gallery-1/beiltrota.jpg`,
+		`${base}/images/gallery-1/meikytrota.jpg`,
+		`${base}/images/gallery-1/onyxxtrota.jpg`,
+		`${base}/images/gallery-1/renotrota.jpg`,
+		`${base}/images/gallery-1/ricotrota.jpg`,
+		`${base}/images/gallery-1/ronjatrota.jpg`,
+		`${base}/images/gallery-1/victrota.jpg`,
+		`${base}/images/gallery-1/frazierposthumousforodin.jpg`,
+		`${base}/images/gallery-1/mofccarolmartina.jpg`
 	];
 
 	const alts = [

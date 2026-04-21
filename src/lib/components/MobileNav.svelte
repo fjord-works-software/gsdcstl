@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
+	import { base } from '$app/paths';
 	import { navItems } from '$lib/nav';
 
 	let open = $state(false);
@@ -43,7 +44,7 @@
 					{#if item.href && item.children}
 						<div class="flex items-stretch">
 							<a
-								href={item.href}
+								href="{base}{item.href}"
 								onclick={close}
 								class="flex-1 px-4 py-2.5 text-white text-sm hover:bg-primary"
 							>
@@ -70,7 +71,7 @@
 								{#each item.children as child}
 									<li>
 										<a
-											href={child.href}
+											href="{base}{child.href}"
 											onclick={close}
 											class="block px-8 py-2 text-white text-sm hover:bg-primary-dark"
 										>
@@ -82,7 +83,7 @@
 						{/if}
 					{:else if item.href}
 						<a
-							href={item.href}
+							href="{base}{item.href}"
 							onclick={close}
 							class="block px-4 py-2.5 text-white text-sm hover:bg-primary"
 						>
@@ -109,7 +110,7 @@
 								{#each item.children as child}
 									<li>
 										<a
-											href={child.href}
+											href="{base}{child.href}"
 											onclick={close}
 											class="block px-8 py-2 text-white text-sm hover:bg-primary-dark"
 										>

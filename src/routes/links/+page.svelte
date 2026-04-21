@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 </script>
 
@@ -60,7 +61,7 @@
 			<li><a href="http://www.nadac.com/" class="text-primary hover:underline" target="_blank" rel="noopener">North American Dog Agility Council, Inc.</a></li>
 			<li><a href="http://www.tdi-dog.org/" class="text-primary hover:underline" target="_blank" rel="noopener">Therapy Dogs International, Inc. (TDI)</a></li>
 			<li><a href="http://www.akc.org/events/cgc/index.cfm" class="text-primary hover:underline" target="_blank" rel="noopener">AKC's Canine Good Citizen (CGC) Program</a></li>
-			<li><a href="/Documents/Training/Satisfying%20the%20Urge%20to%20Herd.pdf" class="text-primary hover:underline" target="_blank" rel="noopener">Satisfying the Urge to Herd (PDF)</a></li>
+			<li><a href="{base}/Documents/Training/Satisfying%20the%20Urge%20to%20Herd.pdf" class="text-primary hover:underline" target="_blank" rel="noopener">Satisfying the Urge to Herd (PDF)</a></li>
 		</ul>
 	</section>
 
@@ -95,16 +96,16 @@
 	<section>
 		<h2 class="text-base font-serif font-semibold text-primary-dark border-b border-gray-200 pb-1 mb-2">Recipes</h2>
 		<ul class="space-y-1">
-			<li><a href="/Documents/Beef%20Liver%20Bait.pdf" class="text-primary hover:underline" target="_blank" rel="noopener">Beef Liver Cake / Beef Liver Bait (PDF)</a></li>
+			<li><a href="{base}/Documents/Beef%20Liver%20Bait.pdf" class="text-primary hover:underline" target="_blank" rel="noopener">Beef Liver Cake / Beef Liver Bait (PDF)</a></li>
 		</ul>
 	</section>
 
 	<section>
 		<h2 class="text-base font-serif font-semibold text-primary-dark border-b border-gray-200 pb-1 mb-2">More Links</h2>
 		<ul class="space-y-1">
-			<li><a href="/links/veterinary-links" class="text-primary hover:underline">Veterinary &amp; Medical Links</a></li>
-			<li><a href="/links/rainbow-bridge" class="text-primary hover:underline">Rainbow Bridge</a></li>
-			<li><a href="/links/web-award" class="text-primary hover:underline">Web Award</a></li>
+			<li><a href="{base}/links/veterinary-links" class="text-primary hover:underline">Veterinary &amp; Medical Links</a></li>
+			<li><a href="{base}/links/rainbow-bridge" class="text-primary hover:underline">Rainbow Bridge</a></li>
+			<li><a href="{base}/links/web-award" class="text-primary hover:underline">Web Award</a></li>
 		</ul>
 	</section>
 

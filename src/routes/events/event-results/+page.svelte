@@ -1,14 +1,15 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import BragEntry from '$lib/components/BragEntry.svelte';
 	import PhotoGallery from '$lib/components/PhotoGallery.svelte';
 
 	const showPhotos = [
-		'/images/bruno-bob-gsdcstl-5.12.19.jpg',
-		'/images/sat-wd-von-loar.jpg',
-		'/images/sun-bob-faithrock-maverick.jpg',
-		'/images/sun-wb-luzak.jpg',
-		'/images/jackson-wd-bow-march19-futurity.jpg'
+		`${base}/images/bruno-bob-gsdcstl-5.12.19.jpg`,
+		`${base}/images/sat-wd-von-loar.jpg`,
+		`${base}/images/sun-bob-faithrock-maverick.jpg`,
+		`${base}/images/sun-wb-luzak.jpg`,
+		`${base}/images/jackson-wd-bow-march19-futurity.jpg`
 	];
 	const showPhotoAlts = [
 		'Best of Breed — Bruno',
@@ -75,7 +76,7 @@
 <div class="flex items-center justify-between mb-6">
 	<h2 class="text-lg font-serif font-semibold text-primary-dark">May 11 & 12, 2019 Specialty Shows</h2>
 	<a
-		href="/events/May-2019-GSDCSTL-Results.pdf"
+		href="{base}/events/May-2019-GSDCSTL-Results.pdf"
 		class="text-sm bg-primary text-white px-3 py-1.5 rounded hover:bg-primary-dark transition-colors"
 	>
 		Results PDF

@@ -1,24 +1,25 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import PhotoGallery from '$lib/components/PhotoGallery.svelte';
 
 	const images = [
-		'/images/gallery-3/02242012dannieandrocky.jpg',
-		'/images/gallery-3/02242012helenfaith.jpg',
-		'/images/gallery-3/02242012judyrocket.jpg',
-		'/images/gallery-3/02242012geralynchance.jpg',
-		'/images/gallery-3/02242012marileephoenix.jpg',
-		'/images/gallery-3/02242012stevebutkus.jpg',
-		'/images/gallery-3/02242012rozeaglerock.jpg',
-		'/images/gallery-3/02242012marileesusan.jpg',
-		'/images/gallery-3/02242012elizabethgregsecretagent.jpg',
-		'/images/gallery-3/02242012rozritz.jpg',
-		'/images/gallery-3/02242012elizabethpeanut.jpg',
-		'/images/gallery-3/02242012stevecharmin.jpg',
-		'/images/gallery-3/02242012stevepinky.jpg',
-		'/images/gallery-3/02242012gregfletcher.jpg',
-		'/images/gallery-3/02242012karenkoko.jpg',
-		'/images/gallery-3/02242012marcia.jpg'
+		`${base}/images/gallery-3/02242012dannieandrocky.jpg`,
+		`${base}/images/gallery-3/02242012helenfaith.jpg`,
+		`${base}/images/gallery-3/02242012judyrocket.jpg`,
+		`${base}/images/gallery-3/02242012geralynchance.jpg`,
+		`${base}/images/gallery-3/02242012marileephoenix.jpg`,
+		`${base}/images/gallery-3/02242012stevebutkus.jpg`,
+		`${base}/images/gallery-3/02242012rozeaglerock.jpg`,
+		`${base}/images/gallery-3/02242012marileesusan.jpg`,
+		`${base}/images/gallery-3/02242012elizabethgregsecretagent.jpg`,
+		`${base}/images/gallery-3/02242012rozritz.jpg`,
+		`${base}/images/gallery-3/02242012elizabethpeanut.jpg`,
+		`${base}/images/gallery-3/02242012stevecharmin.jpg`,
+		`${base}/images/gallery-3/02242012stevepinky.jpg`,
+		`${base}/images/gallery-3/02242012gregfletcher.jpg`,
+		`${base}/images/gallery-3/02242012karenkoko.jpg`,
+		`${base}/images/gallery-3/02242012marcia.jpg`
 	];
 
 	const alts = [

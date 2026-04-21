@@ -1,10 +1,11 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import Carousel from '$lib/components/Carousel.svelte';
 
 	const slides = [
-		{ src: '/images/slide790.jpg', alt: 'German Shepherd Dog Club of St. Louis' },
-		{ src: '/images/slide791.jpg', alt: 'German Shepherd Dog Club of St. Louis' }
+		{ src: `${base}/images/slide790.jpg`, alt: 'German Shepherd Dog Club of St. Louis' },
+		{ src: `${base}/images/slide791.jpg`, alt: 'German Shepherd Dog Club of St. Louis' }
 	];
 </script>
 
