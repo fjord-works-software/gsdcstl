@@ -63,6 +63,5 @@ export const navItems: NavItem[] = [
 			{ label: 'Web Award', href: '/links/web-award' },
 			{ label: 'Veterinary Links', href: '/links/veterinary-links' }
 		]
-	},
-	{ label: 'Members Only', href: '/members-only' }
+	}
 ];
