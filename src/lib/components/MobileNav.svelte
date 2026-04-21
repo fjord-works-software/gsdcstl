@@ -20,14 +20,14 @@
 	}
 </script>
 
-<div class="bg-primary-dark md:hidden">
+<div class="bg-primary-dark md:hidden border-b-4 border-accent">
 	<button
 		onclick={() => (open = !open)}
 		class="w-full flex items-center justify-between px-4 py-3 text-white"
 		aria-expanded={open}
 		aria-label="Toggle navigation menu"
 	>
-		<span class="font-serif text-sm font-bold">Menu</span>
+		<span class="font-serif text-sm font-semibold">Menu</span>
 		<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 			{#if open}
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />

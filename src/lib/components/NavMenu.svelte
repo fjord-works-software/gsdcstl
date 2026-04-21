@@ -19,8 +19,10 @@
 				{#if item.href && item.children}
 					<a
 						href="{base}{item.href}"
-						class="flex items-center gap-1 px-3 py-2.5 text-sm text-white hover:bg-primary transition-colors"
-						class:font-bold={isActive(item.href) || hasActiveChild(item.children)}
+						class="flex items-center gap-1 px-3 py-2.5 text-sm text-white hover:bg-white/10 transition-colors border-b-[3px]"
+						class:border-accent={isActive(item.href) || hasActiveChild(item.children)}
+						class:border-transparent={!isActive(item.href) && !hasActiveChild(item.children)}
+						class:font-semibold={isActive(item.href) || hasActiveChild(item.children)}
 					>
 						{item.label}
 						<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -28,14 +30,15 @@
 						</svg>
 					</a>
 					<ul
-						class="absolute left-0 top-full hidden group-hover:block bg-white border border-gray-200 shadow-lg rounded-b min-w-52 z-20"
+						class="absolute left-0 top-full hidden group-hover:block bg-white border border-gray-100 shadow-xl rounded-b min-w-52 z-20"
 					>
 						{#each item.children as child}
 							<li>
 								<a
 									href="{base}{child.href}"
 									class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary hover:text-white transition-colors"
-									class:font-bold={child.href && isActive(child.href)}
+									class:text-accent={child.href && isActive(child.href)}
+									class:font-semibold={child.href && isActive(child.href)}
 								>
 									{child.label}
 								</a>
@@ -45,17 +48,19 @@
 				{:else if item.href}
 					<a
 						href="{base}{item.href}"
-						class="block px-3 py-2.5 text-sm text-white hover:bg-primary transition-colors"
-						class:font-bold={isActive(item.href)}
+						class="block px-3 py-2.5 text-sm text-white hover:bg-white/10 transition-colors border-b-[3px]"
+						class:border-accent={isActive(item.href)}
+						class:border-transparent={!isActive(item.href)}
+						class:font-semibold={isActive(item.href)}
 					>
 						{item.label}
 					</a>
 				{:else}
 					<button
-						class="flex items-center gap-1 px-3 py-2.5 text-sm transition-colors hover:bg-primary"
-						class:text-white={!hasActiveChild(item.children ?? [])}
-						class:font-bold={hasActiveChild(item.children ?? [])}
-						class:text-primary-light={hasActiveChild(item.children ?? [])}
+						class="flex items-center gap-1 px-3 py-2.5 text-sm text-white hover:bg-white/10 transition-colors border-b-[3px]"
+						class:border-accent={hasActiveChild(item.children ?? [])}
+						class:border-transparent={!hasActiveChild(item.children ?? [])}
+						class:font-semibold={hasActiveChild(item.children ?? [])}
 					>
 						{item.label}
 						<svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -64,14 +69,15 @@
 					</button>
 					{#if item.children}
 						<ul
-							class="absolute left-0 top-full hidden group-hover:block bg-white border border-gray-200 shadow-lg rounded-b min-w-52 z-20"
+							class="absolute left-0 top-full hidden group-hover:block bg-white border border-gray-100 shadow-xl rounded-b min-w-52 z-20"
 						>
 							{#each item.children as child}
 								<li>
 									<a
 										href="{base}{child.href}"
 										class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary hover:text-white transition-colors"
-										class:font-bold={child.href && isActive(child.href)}
+										class:text-accent={child.href && isActive(child.href)}
+										class:font-semibold={child.href && isActive(child.href)}
 									>
 										{child.label}
 									</a>

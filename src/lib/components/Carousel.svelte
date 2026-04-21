@@ -47,8 +47,8 @@
 	<div class="overflow-hidden" bind:this={viewportEl}>
 		<div class="flex touch-pan-y">
 			{#each slides as slide}
-				<div class="min-w-0 flex-[0_0_100%] relative">
-					<img src={slide.src} alt={slide.alt} class="w-full h-72 md:h-96 object-cover" />
+				<div class="min-w-0 flex-[0_0_100%] relative flex justify-center bg-primary-dark/5">
+					<img src={slide.src} alt={slide.alt} class="max-w-full h-auto" />
 					{#if slide.caption}
 						<div class="absolute bottom-0 left-0 right-0 bg-black/50 text-white text-sm px-4 py-2">
 							{slide.caption}

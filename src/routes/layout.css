@@ -4,5 +4,14 @@
 	--color-primary: #4f6951;
 	--color-primary-dark: #3b4e3d;
 	--color-primary-light: #7c9c7f;
-	--font-family-serif: Georgia, serif;
+	--color-accent: #c4922a;
+	--color-accent-light: #e8b96a;
+	--font-family-serif: 'Playfair Display', Georgia, serif;
+}
+
+@layer base {
+	body {
+		font-family: 'Inter', system-ui, -apple-system, sans-serif;
+		color: #374151;
+	}
 }
