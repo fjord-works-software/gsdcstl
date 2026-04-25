@@ -9,7 +9,7 @@
 		aria-hidden="true"
 		class="absolute top-1/2 right-6 -translate-y-1/2 h-32 w-32 opacity-[0.08] pointer-events-none select-none"
 	/>
-	<p class="relative">© {new Date().getFullYear()} German Shepherd Dog Club of St. Louis</p>
+	<p class="relative">© {new Date().getFullYear()} German Shepherd Dog Club of St. Louis <span class="text-primary-light"> · Built by <a href="https://fjordworkssoftware.com" class="hover:underline" target="_blank" rel="noopener">Fjord Works Software</a></span></p>
 	<p class="mt-1 relative">
 		<a href={resolve('/club-info/club-contacts')} class="text-accent-light hover:underline">Contact Us</a>
 	</p>
