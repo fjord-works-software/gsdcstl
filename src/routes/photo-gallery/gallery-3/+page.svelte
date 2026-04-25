@@ -4,41 +4,43 @@
 	import PhotoGallery from '$lib/components/PhotoGallery.svelte';
 
 	const images = [
-		`${base}/images/gallery-3/02242012dannieandrocky.jpg`,
-		`${base}/images/gallery-3/02242012helenfaith.jpg`,
-		`${base}/images/gallery-3/02242012judyrocket.jpg`,
-		`${base}/images/gallery-3/02242012geralynchance.jpg`,
-		`${base}/images/gallery-3/02242012marileephoenix.jpg`,
-		`${base}/images/gallery-3/02242012stevebutkus.jpg`,
-		`${base}/images/gallery-3/02242012rozeaglerock.jpg`,
-		`${base}/images/gallery-3/02242012marileesusan.jpg`,
-		`${base}/images/gallery-3/02242012elizabethgregsecretagent.jpg`,
-		`${base}/images/gallery-3/02242012rozritz.jpg`,
-		`${base}/images/gallery-3/02242012elizabethpeanut.jpg`,
-		`${base}/images/gallery-3/02242012stevecharmin.jpg`,
-		`${base}/images/gallery-3/02242012stevepinky.jpg`,
-		`${base}/images/gallery-3/02242012gregfletcher.jpg`,
-		`${base}/images/gallery-3/02242012karenkoko.jpg`,
-		`${base}/images/gallery-3/02242012marcia.jpg`
+		`${base}/images/gallery-3/03292013dannierocky.jpg`,
+		`${base}/images/gallery-3/03292013judyrocket.jpg`,
+		`${base}/images/gallery-3/03292013stevemayhem.jpg`,
+		`${base}/images/gallery-3/03292013judyteko.jpg`,
+		`${base}/images/gallery-3/03292013gaildarkknight.jpg`,
+		`${base}/images/gallery-3/03292013larryaquila.jpg`,
+		`${base}/images/gallery-3/03292013gailnick.jpg`,
+		`${base}/images/gallery-3/03292013stevejourney2.jpg`,
+		`${base}/images/gallery-3/03292013lianacaballo.jpg`,
+		`${base}/images/gallery-3/03292013steveandbutkus.jpg`,
+		`${base}/images/gallery-3/03292013elizabethandpeanut.jpg`,
+		`${base}/images/gallery-3/03292013roztopper.jpg`,
+		`${base}/images/gallery-3/03292013steveandflyer.jpg`,
+		`${base}/images/gallery-3/03292013lianagregfletcher.jpg`,
+		`${base}/images/gallery-3/03292013greggail.jpg`,
+		`${base}/images/gallery-3/03292013gailr.jpg`,
+		`${base}/images/gallery-3/03292013stevedingle.jpg`
 	];
 
 	const alts = [
 		'Dannie and Rocky',
-		'Helen and Faith',
 		'Judy and Rocket',
-		'Geralyn and Chance',
-		'Marilee and Phoenix',
+		'Steve and Mayhem',
+		'Judy and Teko',
+		'Gail and Dark Knight',
+		'Larry and Aquila',
+		'Gail and Nick',
+		'Steve and Journey',
+		'Liana and Caballo',
 		'Steve and Butkus',
-		'Roz and Eagle Rock',
-		'Marilee and Susan',
-		'Elizabeth, Greg, and Secret Agent',
-		'Roz and Ritz',
 		'Elizabeth and Peanut',
-		'Steve and Charmin',
-		'Steve and Pinky',
-		'Greg and Fletcher',
-		'Karen and Koko',
-		'Marcia'
+		'Roz and Topper',
+		'Steve and Flyer',
+		'Liana, Greg, and Fletcher',
+		'Greg and Gail',
+		'Gail',
+		'Steve and Dingle'
 	];
 </script>
 
@@ -46,11 +48,11 @@
 	<title>Gallery 3 — GSDCSTL</title>
 </svelte:head>
 
-<PageHeader title="2011 GSDC of St. Louis Royal Hecht Awards Ceremony" subtitle="February 24, 2012" />
+<PageHeader title="2013 GSDC of St. Louis Awards Ceremony" subtitle="March 29, 2013" />
 
 <p class="text-gray-700 mb-6">
-	Award presentations for therapy dog, canine good citizen, rally, dual title, best puppy, bred by
-	exhibitor, champion, grand champion, and register of merit achievements.
+	Awards presented for medical alert service dogs, obedience and herding titles, championship and
+	grand championship titles, select and ROM awards, and service dog breeder recognition.
 </p>
 
 <PhotoGallery {images} {alts} />
