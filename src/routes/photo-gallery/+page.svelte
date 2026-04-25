@@ -89,4 +89,9 @@
 			Gallery 3 — 2011 Royal Hecht Awards Ceremony
 		</a>
 	</li>
+	<li>
+		<a href="{base}/photo-gallery/gallery-4" class="text-primary hover:underline">
+			Gallery 4
+		</a>
+	</li>
 </ul>

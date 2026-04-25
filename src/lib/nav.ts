@@ -44,7 +44,8 @@ export const navItems: NavItem[] = [
 		children: [
 			{ label: 'Gallery 1', href: '/photo-gallery/gallery-1' },
 			{ label: 'Gallery 2', href: '/photo-gallery/gallery-2' },
-			{ label: 'Gallery 3', href: '/photo-gallery/gallery-3' }
+			{ label: 'Gallery 3', href: '/photo-gallery/gallery-3' },
+			{ label: 'Gallery 4', href: '/photo-gallery/gallery-4' }
 		]
 	},
 	{
