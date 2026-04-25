@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { resolve } from '$app/paths';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 </script>
 
@@ -38,14 +38,14 @@
 <h2 class="text-lg font-serif font-semibold text-primary-dark mb-2 mt-6">Club Information</h2>
 <ul class="space-y-1 text-sm">
 	<li>
-		<a href="{base}/club-info/constitution-by-laws" class="text-primary hover:underline"
+		<a href={resolve('/club-info/constitution-by-laws')} class="text-primary hover:underline"
 			>Constitution &amp; By-Laws</a
 		>
 	</li>
 	<li>
-		<a href="{base}/club-info/club-contacts" class="text-primary hover:underline">Club Contacts</a>
+		<a href={resolve('/club-info/club-contacts')} class="text-primary hover:underline">Club Contacts</a>
 	</li>
 	<li>
-		<a href="{base}/club-info/club-membership" class="text-primary hover:underline">Club Membership</a>
+		<a href={resolve('/club-info/club-membership')} class="text-primary hover:underline">Club Membership</a>
 	</li>
 </ul>

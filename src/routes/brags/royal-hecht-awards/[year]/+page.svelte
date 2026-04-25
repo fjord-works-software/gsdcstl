@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { resolve } from '$app/paths';
 	import type { PageData } from './$types';
 	let { data }: { data: PageData } = $props();
 	const { year, date, chairperson, members } = data.data;
@@ -21,7 +21,7 @@
 	</p>
 {/if}
 
-<a href="{base}/brags/royal-hecht-awards" class="text-sm text-primary hover:underline mb-6 inline-block">
+<a href={resolve('/brags/royal-hecht-awards')} class="text-sm text-primary hover:underline mb-6 inline-block">
 	← All Years
 </a>
 

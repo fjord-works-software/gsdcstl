@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { resolve } from '$app/paths';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 </script>
 
@@ -10,6 +10,6 @@
 <PageHeader title="Member's Whelping Box" />
 <p class="text-gray-600">
 	Litter announcements from club members. Contact the
-	<a href="{base}/club-info/club-contacts" class="text-primary hover:underline">recording secretary</a> to
+	<a href={resolve('/club-info/club-contacts')} class="text-primary hover:underline">recording secretary</a> to
 	list a litter.
 </p>

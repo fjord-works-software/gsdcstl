@@ -1,15 +1,15 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { resolve } from '$app/paths';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import BragEntry from '$lib/components/BragEntry.svelte';
 	import PhotoGallery from '$lib/components/PhotoGallery.svelte';
 
 	const showPhotos = [
-		`${base}/images/bruno-bob-gsdcstl-5.12.19.jpg`,
-		`${base}/images/sat-wd-von-loar.jpg`,
-		`${base}/images/sun-bob-faithrock-maverick.jpg`,
-		`${base}/images/sun-wb-luzak.jpg`,
-		`${base}/images/jackson-wd-bow-march19-futurity.jpg`
+		resolve('/images/bruno-bob-gsdcstl-5.12.19.jpg' as any),
+		resolve('/images/sat-wd-von-loar.jpg' as any),
+		resolve('/images/sun-bob-faithrock-maverick.jpg' as any),
+		resolve('/images/sun-wb-luzak.jpg' as any),
+		resolve('/images/jackson-wd-bow-march19-futurity.jpg' as any)
 	];
 	const showPhotoAlts = [
 		'Best of Breed — Bruno',
@@ -76,7 +76,7 @@
 <div class="flex items-center justify-between mb-6">
 	<h2 class="text-lg font-serif font-semibold text-primary-dark">May 11 & 12, 2019 Specialty Shows</h2>
 	<a
-		href="{base}/events/May-2019-GSDCSTL-Results.pdf"
+		href={resolve('/events/May-2019-GSDCSTL-Results.pdf')}
 		class="text-sm bg-primary text-white px-3 py-1.5 rounded hover:bg-primary-dark transition-colors"
 	>
 		Results PDF

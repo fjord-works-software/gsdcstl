@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { base } from '$app/paths';
+	import { resolve } from '$app/paths';
 	import { navItems } from '$lib/nav';
 
 	function isActive(href: string) {
-		return $page.url.pathname === base + href;
+		return $page.url.pathname === resolve(href as any);
 	}
 
 	function hasActiveChild(children: typeof navItems) {
@@ -18,7 +18,7 @@
 			<li class="relative group">
 				{#if item.href && item.children}
 					<a
-						href="{base}{item.href}"
+						href={resolve(item.href as any)}
 						class="flex items-center gap-1 px-3 py-2.5 text-sm text-white hover:bg-white/10 transition-colors border-b-[3px]"
 						class:border-accent={isActive(item.href) || hasActiveChild(item.children)}
 						class:border-transparent={!isActive(item.href) && !hasActiveChild(item.children)}
@@ -35,7 +35,7 @@
 						{#each item.children as child}
 							<li>
 								<a
-									href="{base}{child.href}"
+									href={resolve(child.href as any)}
 									class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary hover:text-white transition-colors"
 									class:text-accent={child.href && isActive(child.href)}
 									class:font-semibold={child.href && isActive(child.href)}
@@ -47,7 +47,7 @@
 					</ul>
 				{:else if item.href}
 					<a
-						href="{base}{item.href}"
+						href={resolve(item.href as any)}
 						class="block px-3 py-2.5 text-sm text-white hover:bg-white/10 transition-colors border-b-[3px]"
 						class:border-accent={isActive(item.href)}
 						class:border-transparent={!isActive(item.href)}
@@ -74,7 +74,7 @@
 							{#each item.children as child}
 								<li>
 									<a
-										href="{base}{child.href}"
+										href={resolve(child.href as any)}
 										class="block px-4 py-2 text-sm text-gray-700 hover:bg-primary hover:text-white transition-colors"
 										class:text-accent={child.href && isActive(child.href)}
 										class:font-semibold={child.href && isActive(child.href)}
