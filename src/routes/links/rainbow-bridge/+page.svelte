@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { resolve } from '$app/paths';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 </script>
 
@@ -29,5 +29,5 @@
 </div>
 
 <p class="mt-8 text-gray-400 text-xs italic">
-	To add a memorial, please contact the <a href="{base}/club-info/club-contacts" class="underline">recording secretary</a>.
+	To add a memorial, please contact the <a href={resolve('/club-info/club-contacts')} class="underline">recording secretary</a>.
 </p>

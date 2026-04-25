@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { resolve } from '$app/paths';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import Carousel from '$lib/components/Carousel.svelte';
 
 	const slides = [
-		{ src: `${base}/images/slide790.jpg`, alt: 'German Shepherd Dog Club of St. Louis' },
-		{ src: `${base}/images/slide791.jpg`, alt: 'German Shepherd Dog Club of St. Louis' }
+		{ src: resolve('/images/slide790.jpg' as any), alt: 'German Shepherd Dog Club of St. Louis' },
+		{ src: resolve('/images/slide791.jpg' as any), alt: 'German Shepherd Dog Club of St. Louis' }
 	];
 </script>
 

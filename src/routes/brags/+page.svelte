@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { resolve } from '$app/paths';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 </script>
 
@@ -12,7 +12,7 @@
 <div class="space-y-8">
 
 	<div>
-		<img src="{base}/images/blondie-brag.jpg" alt="Blondie" class="max-w-xs rounded shadow mb-3" />
+		<img src={resolve('/images/blondie-brag.jpg' as any)} alt="Blondie" class="max-w-xs rounded shadow mb-3" />
 		<h3 class="font-semibold text-primary-dark">
 			CH Guardians Gold Medal V Rochill OFA H/E/TH — "Blondie"
 		</h3>
@@ -37,7 +37,7 @@
 	</div>
 
 	<div>
-		<img src="{base}/images/vee-brag.jpg" alt="Vee" class="max-w-xs rounded shadow mb-3" />
+		<img src={resolve('/images/vee-brag.jpg' as any)} alt="Vee" class="max-w-xs rounded shadow mb-3" />
 		<h3 class="font-semibold text-primary-dark">
 			Guardians 2Kiss A Thief V Rochill — "Vee"
 		</h3>
@@ -58,7 +58,7 @@
 	</div>
 
 	<div>
-		<img src="{base}/images/noelle-brag.jpg" alt="Noelle" class="max-w-xs rounded shadow mb-3" />
+		<img src={resolve('/images/noelle-brag.jpg' as any)} alt="Noelle" class="max-w-xs rounded shadow mb-3" />
 		<h3 class="font-semibold text-primary-dark">
 			Guardians NoNo Noelle V Rochill — "Noelle"
 		</h3>
@@ -75,7 +75,7 @@
 	</div>
 
 	<div>
-		<img src="{base}/images/bruno-bob-gsdcstl-5.12.19.jpg" alt="Bruno" class="max-w-xs rounded shadow mb-3" />
+		<img src={resolve('/images/bruno-bob-gsdcstl-5.12.19.jpg' as any)} alt="Bruno" class="max-w-xs rounded shadow mb-3" />
 		<h3 class="font-semibold text-primary-dark">Faithrock Maverick — "Bruno"</h3>
 		<p class="text-sm text-gray-700 mt-1">
 			May 12, 2019 — Bruno was awarded Winner's, Best of Winners and Best of Breed at the GSDCSTL
@@ -91,7 +91,7 @@
 	</div>
 
 	<div>
-		<img src="{base}/images/baretta-wb-bow-april-6-7-19.jpg" alt="Baretta" class="max-w-xs rounded shadow mb-3" />
+		<img src={resolve('/images/baretta-wb-bow-april-6-7-19.jpg' as any)} alt="Baretta" class="max-w-xs rounded shadow mb-3" />
 		<h3 class="font-semibold text-primary-dark">Baretta</h3>
 		<p class="text-sm text-gray-700 mt-1">
 			4/7/2019 — Back to back Winners Bitch &amp; Best of Winners for Baretta this weekend!
@@ -108,7 +108,7 @@
 	</div>
 
 	<div>
-		<img src="{base}/images/hazel-group-two-april-6-19.jpg" alt="Hazel" class="max-w-xs rounded shadow mb-3" />
+		<img src={resolve('/images/hazel-group-two-april-6-19.jpg' as any)} alt="Hazel" class="max-w-xs rounded shadow mb-3" />
 		<h3 class="font-semibold text-primary-dark">
 			Group Placing Can. Sel. BOF RMB MBISS BPIS MBPISS CH Forest Knolls Hazelnut V Winsome — "Hazel"
 		</h3>
@@ -125,7 +125,7 @@
 	</div>
 
 	<div>
-		<img src="{base}/images/jackson-wd-bow-march19-futurity.jpg" alt="Jackson WD &amp; BOW" class="max-w-xs rounded shadow mb-3" />
+		<img src={resolve('/images/jackson-wd-bow-march19-futurity.jpg' as any)} alt="Jackson WD &amp; BOW" class="max-w-xs rounded shadow mb-3" />
 		<h3 class="font-semibold text-primary-dark">
 			Valleyview Faith Rock Remember When — "Jackson"
 		</h3>
@@ -144,7 +144,7 @@
 	</div>
 
 	<div>
-		<img src="{base}/images/bof-ch-faithrock-wyatt-earp-v-tin-roof-rn-tc.jpg" alt="Ruger" class="max-w-xs rounded shadow mb-3" />
+		<img src={resolve('/images/bof-ch-faithrock-wyatt-earp-v-tin-roof-rn-tc.jpg' as any)} alt="Ruger" class="max-w-xs rounded shadow mb-3" />
 		<h3 class="font-semibold text-primary-dark">
 			BOF CH Faithrock Wyatt Earp v Tin Roof RN TC — "Ruger"
 		</h3>
@@ -164,7 +164,7 @@
 
 <h2 class="text-lg font-serif font-semibold text-primary-dark mb-2 mt-10">More Brags</h2>
 <ul class="space-y-1 text-sm">
-	<li><a href="{base}/brags/hall-of-fame" class="text-primary hover:underline">Hall of Fame</a></li>
-	<li><a href="{base}/brags/wag-n-tongue" class="text-primary hover:underline">Wag 'N' Tongue Newsletter</a></li>
-	<li><a href="{base}/brags/royal-hecht-awards" class="text-primary hover:underline">Royal Hecht Awards</a></li>
+	<li><a href={resolve('/brags/hall-of-fame')} class="text-primary hover:underline">Hall of Fame</a></li>
+	<li><a href={resolve('/brags/wag-n-tongue')} class="text-primary hover:underline">Wag 'N' Tongue Newsletter</a></li>
+	<li><a href={resolve('/brags/royal-hecht-awards')} class="text-primary hover:underline">Royal Hecht Awards</a></li>
 </ul>

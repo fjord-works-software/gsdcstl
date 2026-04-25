@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { resolve } from '$app/paths';
 </script>
 
 <header class="bg-primary-dark text-white py-5 px-6 shadow-md border-b-4 border-accent">
 	<div class="max-w-5xl mx-auto flex items-center gap-5">
 		<img
-			src="{base}/images/891512a4-fca3-43fd-9722-e189a1bc9315.png"
+			src={resolve('/images/891512a4-fca3-43fd-9722-e189a1bc9315.png' as any)}
 			alt="German Shepherd Dog Club of St. Louis seal"
 			class="h-20 w-20 shrink-0"
 		/>

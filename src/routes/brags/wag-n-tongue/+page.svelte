@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { resolve } from '$app/paths';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	const newsletters = [
 		{ label: 'January 2018', file: 'January 2018 wag.pdf' },
@@ -75,7 +75,7 @@
 	{#each newsletters as n}
 		<li>
 			<a
-				href="{base}/Documents/Wags/{n.file}"
+				href={resolve(`/Documents/Wags/${n.file}` as any)}
 				class="block p-2 rounded border border-gray-200 hover:border-primary hover:text-primary transition-colors text-gray-700"
 				target="_blank"
 				rel="noopener"

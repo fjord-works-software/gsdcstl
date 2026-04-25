@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { resolve } from '$app/paths';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import awards from '$lib/data/royal-hecht-awards.json';
 	const years = awards.map((a) => a.year).sort((a, b) => b - a);
@@ -17,7 +17,7 @@
 <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 gap-2 mb-10">
 	{#each years as year}
 		<a
-			href="{base}/brags/royal-hecht-awards/{year}"
+			href={resolve('/brags/royal-hecht-awards/[year]', { year: String(year) })}
 			class="block text-center py-2 px-1 rounded border border-primary text-primary font-semibold text-sm hover:bg-primary hover:text-white transition-colors"
 		>
 			{year}

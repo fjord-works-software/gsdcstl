@@ -1,25 +1,25 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { resolve } from '$app/paths';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import PhotoGallery from '$lib/components/PhotoGallery.svelte';
 
 	const images = [
-		`${base}/images/gallery-4/02242012dannieandrocky.jpg`,
-		`${base}/images/gallery-4/02242012helenfaith.jpg`,
-		`${base}/images/gallery-4/02242012judyrocket.jpg`,
-		`${base}/images/gallery-4/02242012geralynchance.jpg`,
-		`${base}/images/gallery-4/02242012marileephoenix.jpg`,
-		`${base}/images/gallery-4/02242012stevebutkus.jpg`,
-		`${base}/images/gallery-4/02242012rozeaglerock.jpg`,
-		`${base}/images/gallery-4/02242012marileesusan.jpg`,
-		`${base}/images/gallery-4/02242012elizabethgregsecretagent.jpg`,
-		`${base}/images/gallery-4/02242012rozritz.jpg`,
-		`${base}/images/gallery-4/02242012elizabethpeanut.jpg`,
-		`${base}/images/gallery-4/02242012stevecharmin.jpg`,
-		`${base}/images/gallery-4/02242012stevepinky.jpg`,
-		`${base}/images/gallery-4/02242012gregfletcher.jpg`,
-		`${base}/images/gallery-4/02242012karenkoko.jpg`,
-		`${base}/images/gallery-4/02242012marcia.jpg`
+		resolve('/images/gallery-4/02242012dannieandrocky.jpg' as any),
+		resolve('/images/gallery-4/02242012helenfaith.jpg' as any),
+		resolve('/images/gallery-4/02242012judyrocket.jpg' as any),
+		resolve('/images/gallery-4/02242012geralynchance.jpg' as any),
+		resolve('/images/gallery-4/02242012marileephoenix.jpg' as any),
+		resolve('/images/gallery-4/02242012stevebutkus.jpg' as any),
+		resolve('/images/gallery-4/02242012rozeaglerock.jpg' as any),
+		resolve('/images/gallery-4/02242012marileesusan.jpg' as any),
+		resolve('/images/gallery-4/02242012elizabethgregsecretagent.jpg' as any),
+		resolve('/images/gallery-4/02242012rozritz.jpg' as any),
+		resolve('/images/gallery-4/02242012elizabethpeanut.jpg' as any),
+		resolve('/images/gallery-4/02242012stevecharmin.jpg' as any),
+		resolve('/images/gallery-4/02242012stevepinky.jpg' as any),
+		resolve('/images/gallery-4/02242012gregfletcher.jpg' as any),
+		resolve('/images/gallery-4/02242012karenkoko.jpg' as any),
+		resolve('/images/gallery-4/02242012marcia.jpg' as any)
 	];
 
 	const alts = [

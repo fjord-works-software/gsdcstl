@@ -1,25 +1,25 @@
 <script lang="ts">
-	import { base } from '$app/paths';
+	import { resolve } from '$app/paths';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import PhotoGallery from '$lib/components/PhotoGallery.svelte';
 
 	const images = [
-		`${base}/images/gallery-2/rothandbellsaandt.jpg`,
-		`${base}/images/gallery-2/duncanandricosa.jpg`,
-		`${base}/images/gallery-2/beattieandvicsa.jpg`,
-		`${base}/images/gallery-2/monticelliand-onyxxsaandcs.jpg`,
-		`${base}/images/gallery-2/robertsonandamorsa.jpg`,
-		`${base}/images/gallery-2/wilsonandronjacs.jpg`,
-		`${base}/images/gallery-2/margulandmeikytanded.jpg`,
-		`${base}/images/gallery-2/beiltrota.jpg`,
-		`${base}/images/gallery-2/meikytrota.jpg`,
-		`${base}/images/gallery-2/onyxxtrota.jpg`,
-		`${base}/images/gallery-2/renotrota.jpg`,
-		`${base}/images/gallery-2/ricotrota.jpg`,
-		`${base}/images/gallery-2/ronjatrota.jpg`,
-		`${base}/images/gallery-2/victrota.jpg`,
-		`${base}/images/gallery-2/frazierposthumousforodin.jpg`,
-		`${base}/images/gallery-2/mofccarolmartina.jpg`
+		resolve('/images/gallery-2/rothandbellsaandt.jpg' as any),
+		resolve('/images/gallery-2/duncanandricosa.jpg' as any),
+		resolve('/images/gallery-2/beattieandvicsa.jpg' as any),
+		resolve('/images/gallery-2/monticelliand-onyxxsaandcs.jpg' as any),
+		resolve('/images/gallery-2/robertsonandamorsa.jpg' as any),
+		resolve('/images/gallery-2/wilsonandronjacs.jpg' as any),
+		resolve('/images/gallery-2/margulandmeikytanded.jpg' as any),
+		resolve('/images/gallery-2/beiltrota.jpg' as any),
+		resolve('/images/gallery-2/meikytrota.jpg' as any),
+		resolve('/images/gallery-2/onyxxtrota.jpg' as any),
+		resolve('/images/gallery-2/renotrota.jpg' as any),
+		resolve('/images/gallery-2/ricotrota.jpg' as any),
+		resolve('/images/gallery-2/ronjatrota.jpg' as any),
+		resolve('/images/gallery-2/victrota.jpg' as any),
+		resolve('/images/gallery-2/frazierposthumousforodin.jpg' as any),
+		resolve('/images/gallery-2/mofccarolmartina.jpg' as any)
 	];
 
 	const alts = [
