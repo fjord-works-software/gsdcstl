@@ -37,18 +37,24 @@
 <svelte:window onkeydown={handleKeydown} />
 
 {#if open}
-	<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 	<div
 		role="dialog"
 		aria-modal="true"
 		aria-label="Image lightbox"
+		tabindex="-1"
 		class="fixed inset-0 z-50 flex items-center justify-center"
 		transition:fade={{ duration: 150 }}
 		onkeydown={handleKeydown}
 	>
 		<!-- Backdrop -->
-		<!-- svelte-ignore a11y_click_events_have_key_events a11y_no_static_element_interactions -->
-		<div class="absolute inset-0 bg-black/85 cursor-pointer" onclick={close}></div>
+		<div
+			role="button"
+			tabindex="-1"
+			aria-label="Close lightbox"
+			class="absolute inset-0 bg-black/85 cursor-pointer"
+			onclick={close}
+			onkeydown={(e) => e.key === 'Enter' && close()}
+		></div>
 
 		<!-- Image -->
 		<div class="relative z-10 max-w-[90vw] max-h-[90vh] flex items-center justify-center">

@@ -44,7 +44,7 @@
 					{#if item.href && item.children}
 						<div class="flex items-stretch">
 							<a
-								href={resolve(item.href)}
+								href={resolve(item.href as any)}
 								onclick={close}
 								class="flex-1 px-4 py-2.5 text-white text-sm hover:bg-primary"
 							>
@@ -71,7 +71,7 @@
 								{#each item.children as child}
 									<li>
 										<a
-											href={resolve(child.href)}
+											href={resolve(child.href as any)}
 											onclick={close}
 											class="block px-8 py-2 text-white text-sm hover:bg-primary-dark"
 										>
@@ -83,7 +83,7 @@
 						{/if}
 					{:else if item.href}
 						<a
-							href={resolve(item.href)}
+							href={resolve(item.href as any)}
 							onclick={close}
 							class="block px-4 py-2.5 text-white text-sm hover:bg-primary"
 						>
@@ -110,7 +110,7 @@
 								{#each item.children as child}
 									<li>
 										<a
-											href={resolve(child.href)}
+											href={resolve(child.href as any)}
 											onclick={close}
 											class="block px-8 py-2 text-white text-sm hover:bg-primary-dark"
 										>
