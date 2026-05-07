@@ -1,21 +1,25 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import PageHeader from '$lib/components/PageHeader.svelte';
+	import type { PageData } from './$types';
+
+	const { data }: { data: PageData } = $props();
 </script>
 
 <svelte:head>
 	<title>Events — GSDCSTL</title>
 </svelte:head>
 
-<PageHeader title="Events" />
+<PageHeader title={data.title} />
 
-<p class="mb-6 text-gray-700">
-	Please click <a href={resolve('/events/show-premium')} class="text-primary hover:underline">Show Premium</a>
-	for specialty entries, Temperament Test and info. for the Midwest Futurity.
-</p>
+<div class="cms-content mb-6">
+	{@html data.body}
+</div>
 
-<img
-	src={resolve('/images/event-flyer-may25.jpg' as any)}
-	alt="Event Flyer"
-	class="max-w-full rounded shadow"
-/>
+{#if data.event_flyer}
+	<img
+		src={resolve(data.event_flyer as any)}
+		alt="Event Flyer"
+		class="max-w-full rounded shadow"
+	/>
+{/if}

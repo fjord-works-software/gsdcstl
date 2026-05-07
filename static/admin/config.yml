@@ -1,0 +1,95 @@
+backend:
+  name: test-repo
+  repo: fjord-works-software/gsdcstl
+  branch: main
+  base_url: https://fjordworkssoftware.workers.dev # replace with your sveltia-cms-auth Worker URL
+
+media_folder: static/images/uploads
+public_folder: /images/uploads
+
+collections:
+  - name: brags
+    label: Brags
+    label_singular: Brag
+    folder: content/brags
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - label: Title
+        name: title
+        widget: string
+        hint: "Full registered name and nickname, e.g. CH Guardians Gold Medal — 'Blondie'"
+      - label: Date
+        name: date
+        widget: datetime
+        type: date
+        format: YYYY-MM-DD
+      - label: Photo
+        name: image
+        widget: image
+        required: false
+      - label: Content
+        name: body
+        widget: markdown
+        hint: "Include pedigree info (sire, dam, owners), show results, and any other details"
+
+  - name: pages
+    label: Pages
+    files:
+      - label: Home Page
+        name: home
+        file: content/pages/home.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Content, name: body, widget: markdown }
+
+      - label: Events
+        name: events
+        file: content/pages/events.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - label: Event Flyer Image
+            name: event_flyer
+            widget: image
+            required: false
+            hint: "Upload the current event flyer image"
+          - { label: Description, name: body, widget: markdown }
+
+      - label: Regular Meetings
+        name: calendar
+        file: content/pages/calendar.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Content, name: body, widget: markdown }
+
+      - label: How to Join (Membership)
+        name: membership
+        file: content/pages/membership.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Content, name: body, widget: markdown }
+
+  - name: contacts
+    label: Club Contacts
+    files:
+      - label: Officers & Board
+        name: contacts
+        file: content/contacts.json
+        format: json
+        fields:
+          - { label: Year, name: year, widget: string }
+          - { label: Club Phone, name: phone, widget: string }
+          - label: Officers
+            name: officers
+            widget: list
+            label_singular: Officer
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Name, name: name, widget: string }
+              - { label: Email, name: email, widget: string }
+          - label: Board of Directors
+            name: board
+            widget: list
+            label_singular: Board Member
+            fields:
+              - { label: Name, name: name, widget: string }

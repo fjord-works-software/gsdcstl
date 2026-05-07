@@ -1,0 +1,18 @@
+{
+  "year": "2025",
+  "phone": "636-495-5864",
+  "officers": [
+    { "title": "President", "name": "Jayne Faupl", "email": "President@gsdcstl.org" },
+    { "title": "Vice President", "name": "Laura Shearin", "email": "VicePresident@gsdcstl.org" },
+    { "title": "Treasurer", "name": "Pam Aman", "email": "Treasurer@gsdcstl.org" },
+    { "title": "Recording Secretary", "name": "Laura Marrocco", "email": "RecSec@gsdcstl.org" },
+    { "title": "Corresponding Secretary", "name": "Linda VanVickle", "email": "CorrSec@gsdcstl.org" }
+  ],
+  "board": [
+    { "name": "Steve Dobbins" },
+    { "name": "Larry Duerbeck" },
+    { "name": "Margaret O'Neill" },
+    { "name": "Brian Paschke" },
+    { "name": "Butch Stiefferman (past president)" }
+  ]
+}
