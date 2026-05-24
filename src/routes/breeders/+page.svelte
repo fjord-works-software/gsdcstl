@@ -11,7 +11,7 @@
 
 <ul class="space-y-4 mb-6">
 	<li>
-		<a href="http://www.cimarron-gsd.com" class="font-medium text-primary hover:underline" target="_blank" rel="noopener">
+		<a href="https://www.cimarron-gsd.com" class="font-medium text-primary hover:underline" target="_blank" rel="noopener">
 			Cimarron Shepherds
 		</a>
 		<p class="text-sm text-gray-600">Steve Dobbins</p>
