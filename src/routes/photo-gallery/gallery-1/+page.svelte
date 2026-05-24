@@ -2,6 +2,9 @@
 	import { resolve } from '$app/paths';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import PhotoGallery from '$lib/components/PhotoGallery.svelte';
+	import type { PageData } from './$types';
+
+	const { data }: { data: PageData } = $props();
 
 	const images = [
 		resolve('/images/gallery-1/678767082_122094941444427772_2341627369910192194_n.jpg' as any),
@@ -23,7 +26,6 @@
 		resolve('/images/gallery-1/680830997_122095649102427772_2934782225156185604_n.jpg' as any),
 		resolve('/images/gallery-1/680974093_122094941456427772_7116911862178034038_n.jpg' as any)
 	];
-
 	const alts = Array.from({ length: 18 }, (_, i) => `Gallery 1 photo ${i + 1}`);
 </script>
 
@@ -31,10 +33,10 @@
 	<title>Gallery 1 — GSDCSTL</title>
 </svelte:head>
 
-<PageHeader title="2026 GSDC of St. Louis Awards Ceremony" subtitle="April 21, 2026" />
+<PageHeader title={data.title} subtitle={data.subtitle} />
 
-<p class="text-gray-700 mb-6">
-	GSDCSTL presented 14 plaques and 1 certificate to members for their dogs’ achievements in 2025. Congratulations to all. Great job.
-</p>
+<div class="cms-content mb-6">
+	{@html data.body}
+</div>
 
 <PhotoGallery {images} {alts} />

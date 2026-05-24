@@ -1,13 +1,16 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import PageHeader from '$lib/components/PageHeader.svelte';
+	import type { PageData } from './$types';
+
+	const { data }: { data: PageData } = $props();
 </script>
 
 <svelte:head>
-	<title>Breeders — GSDCSTL</title>
+	<title>{data.title} — GSDCSTL</title>
 </svelte:head>
 
-<PageHeader title="Breeder Directory" />
+<PageHeader title={data.title} />
 
 <ul class="space-y-4 mb-6">
 	<li>

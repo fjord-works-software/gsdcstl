@@ -1,5 +1,8 @@
 <script lang="ts">
 	import PageHeader from '$lib/components/PageHeader.svelte';
+	import type { PageData } from './$types';
+
+	const { data }: { data: PageData } = $props();
 </script>
 
 <svelte:head>
@@ -9,37 +12,23 @@
 <PageHeader title="Stud Dogs" />
 
 <div class="space-y-8">
-
-<article class="border border-gray-200 rounded p-5">
-	<h2 class="text-lg font-serif font-bold text-primary-dark mb-1">
-		Ch DeRousse's Ozark Mountain Daredevil TC OFA H/E/THY/Cardiac/CHIC
-	</h2>
-	<p class="text-gray-500 text-sm mb-3">Call name: <strong>"Crockett"</strong></p>
-	<dl class="text-sm text-gray-700 space-y-1">
-		<div class="flex gap-2"><dt class="font-semibold w-28 shrink-0">Stud fee:</dt><dd>$800</dd></div>
-		<div class="flex gap-2"><dt class="font-semibold w-28 shrink-0">Requirements:</dt><dd>BC/VC required</dd></div>
-		<div class="flex gap-2"><dt class="font-semibold w-28 shrink-0">Frozen semen:</dt><dd>Available</dd></div>
-		<div class="flex gap-2"><dt class="font-semibold w-28 shrink-0">Owner:</dt><dd>Judy DeRousse</dd></div>
-		<div class="flex gap-2"><dt class="font-semibold w-28 shrink-0">Email:</dt><dd><a href="mailto:judyderousse@gmail.com" class="text-primary hover:underline">judyderousse@gmail.com</a></dd></div>
-		<div class="flex gap-2"><dt class="font-semibold w-28 shrink-0">Phone:</dt><dd><a href="tel:3143680121" class="text-primary hover:underline">314-368-0121</a></dd></div>
-	</dl>
-</article>
-
-<article class="border border-gray-200 rounded p-5">
-	<h2 class="text-lg font-serif font-bold text-primary-dark mb-1">
-		Ch Shaden's Rudy's Dream OFA H/E
-	</h2>
-	<p class="text-gray-500 text-sm mb-3">Call name: <strong>"Rudy"</strong> · DOB: 5/4/2013</p>
-	<dl class="text-sm text-gray-700 space-y-1">
-		<div class="flex gap-2"><dt class="font-semibold w-28 shrink-0">Stud fee:</dt><dd>$700</dd></div>
-		<div class="flex gap-2"><dt class="font-semibold w-28 shrink-0">Frozen semen:</dt><dd>Available — will ship</dd></div>
-		<div class="flex gap-2"><dt class="font-semibold w-28 shrink-0">Sire:</dt><dd>U.S. Select #7 CH. Forest Knoll When It's Right Hadori</dd></div>
-		<div class="flex gap-2"><dt class="font-semibold w-28 shrink-0">Dam:</dt><dd>U.S. CH Mastana's Mariah The Party's ON</dd></div>
-		<div class="flex gap-2"><dt class="font-semibold w-28 shrink-0">Owner:</dt><dd>Glenn Murphy</dd></div>
-		<div class="flex gap-2"><dt class="font-semibold w-28 shrink-0">Email:</dt><dd><a href="mailto:Murfamx4@att.net" class="text-primary hover:underline">Murfamx4@att.net</a></dd></div>
-		<div class="flex gap-2"><dt class="font-semibold w-28 shrink-0">Phone:</dt><dd><a href="tel:3146033874" class="text-primary hover:underline">314-603-3874</a></dd></div>
-	</dl>
-	<p class="text-xs text-gray-500 mt-3">Proven stud · Great temperament · OFA hips/elbows · Large bone structure</p>
-</article>
-
+	{#each data.studs as dog}
+		<article class="border border-gray-200 rounded p-5">
+			<h2 class="text-lg font-serif font-bold text-primary-dark mb-1">{dog.registered_name}</h2>
+			<p class="text-gray-500 text-sm mb-3">
+				Call name: <strong>"{dog.call_name}"</strong>{#if dog.dob} · DOB: {dog.dob}{/if}
+			</p>
+			<dl class="text-sm text-gray-700 space-y-1">
+				{#if dog.stud_fee}<div class="flex gap-2"><dt class="font-semibold w-28 shrink-0">Stud fee:</dt><dd>{dog.stud_fee}</dd></div>{/if}
+				{#if dog.requirements}<div class="flex gap-2"><dt class="font-semibold w-28 shrink-0">Requirements:</dt><dd>{dog.requirements}</dd></div>{/if}
+				{#if dog.frozen_semen}<div class="flex gap-2"><dt class="font-semibold w-28 shrink-0">Frozen semen:</dt><dd>{dog.frozen_semen}</dd></div>{/if}
+				{#if dog.sire}<div class="flex gap-2"><dt class="font-semibold w-28 shrink-0">Sire:</dt><dd>{dog.sire}</dd></div>{/if}
+				{#if dog.dam}<div class="flex gap-2"><dt class="font-semibold w-28 shrink-0">Dam:</dt><dd>{dog.dam}</dd></div>{/if}
+				<div class="flex gap-2"><dt class="font-semibold w-28 shrink-0">Owner:</dt><dd>{dog.owner}</dd></div>
+				<div class="flex gap-2"><dt class="font-semibold w-28 shrink-0">Email:</dt><dd><a href="mailto:{dog.email}" class="text-primary hover:underline">{dog.email}</a></dd></div>
+				<div class="flex gap-2"><dt class="font-semibold w-28 shrink-0">Phone:</dt><dd><a href="tel:{dog.phone.replace(/\D/g, '')}" class="text-primary hover:underline">{dog.phone}</a></dd></div>
+			</dl>
+			{#if dog.notes}<p class="text-xs text-gray-500 mt-3">{dog.notes}</p>{/if}
+		</article>
+	{/each}
 </div>

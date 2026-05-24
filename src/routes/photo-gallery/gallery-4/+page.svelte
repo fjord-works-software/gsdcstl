@@ -2,6 +2,9 @@
 	import { resolve } from '$app/paths';
 	import PageHeader from '$lib/components/PageHeader.svelte';
 	import PhotoGallery from '$lib/components/PhotoGallery.svelte';
+	import type { PageData } from './$types';
+
+	const { data }: { data: PageData } = $props();
 
 	const images = [
 		resolve('/images/gallery-4/02242012dannieandrocky.jpg' as any),
@@ -21,24 +24,11 @@
 		resolve('/images/gallery-4/02242012karenkoko.jpg' as any),
 		resolve('/images/gallery-4/02242012marcia.jpg' as any)
 	];
-
 	const alts = [
-		'Dannie and Rocky',
-		'Helen and Faith',
-		'Judy and Rocket',
-		'Geralyn and Chance',
-		'Marilee and Phoenix',
-		'Steve and Butkus',
-		'Roz and Eagle Rock',
-		'Marilee and Susan',
-		'Elizabeth, Greg, and Secret Agent',
-		'Roz and Ritz',
-		'Elizabeth and Peanut',
-		'Steve and Charmin',
-		'Steve and Pinky',
-		'Greg and Fletcher',
-		'Karen and Koko',
-		'Marcia'
+		'Dannie and Rocky', 'Helen and Faith', 'Judy and Rocket', 'Geralyn and Chance',
+		'Marilee and Phoenix', 'Steve and Butkus', 'Roz and Eagle Rock', 'Marilee and Susan',
+		'Elizabeth, Greg, and Secret Agent', 'Roz and Ritz', 'Elizabeth and Peanut',
+		'Steve and Charmin', 'Steve and Pinky', 'Greg and Fletcher', 'Karen and Koko', 'Marcia'
 	];
 </script>
 
@@ -46,11 +36,10 @@
 	<title>Gallery 4 — GSDCSTL</title>
 </svelte:head>
 
-<PageHeader title="2011 GSDC of St. Louis Royal Hecht Awards Ceremony" subtitle="February 24, 2012" />
+<PageHeader title={data.title} subtitle={data.subtitle} />
 
-<p class="text-gray-700 mb-6">
-	Award presentations for therapy dog, canine good citizen, rally, dual title, best puppy, bred by
-	exhibitor, champion, grand champion, and register of merit achievements.
-</p>
+<div class="cms-content mb-6">
+	{@html data.body}
+</div>
 
 <PhotoGallery {images} {alts} />

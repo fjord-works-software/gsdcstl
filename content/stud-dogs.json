@@ -1,0 +1,32 @@
+{
+  "dogs": [
+    {
+      "registered_name": "Ch DeRousse's Ozark Mountain Daredevil TC OFA H/E/THY/Cardiac/CHIC",
+      "call_name": "Crockett",
+      "dob": "",
+      "stud_fee": "$800",
+      "requirements": "BC/VC required",
+      "frozen_semen": "Available",
+      "sire": "",
+      "dam": "",
+      "owner": "Judy DeRousse",
+      "email": "judyderousse@gmail.com",
+      "phone": "314-368-0121",
+      "notes": ""
+    },
+    {
+      "registered_name": "Ch Shaden's Rudy's Dream OFA H/E",
+      "call_name": "Rudy",
+      "dob": "5/4/2013",
+      "stud_fee": "$700",
+      "requirements": "",
+      "frozen_semen": "Available — will ship",
+      "sire": "U.S. Select #7 CH. Forest Knoll When It's Right Hadori",
+      "dam": "U.S. CH Mastana's Mariah The Party's ON",
+      "owner": "Glenn Murphy",
+      "email": "Murfamx4@att.net",
+      "phone": "314-603-3874",
+      "notes": "Proven stud · Great temperament · OFA hips/elbows · Large bone structure"
+    }
+  ]
+}

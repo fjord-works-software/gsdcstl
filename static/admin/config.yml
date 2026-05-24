@@ -1,5 +1,5 @@
 backend:
-  name: test-repo
+  name: github
   repo: fjord-works-software/gsdcstl
   branch: main
   base_url: https://fjordworkssoftware.workers.dev # replace with your sveltia-cms-auth Worker URL
@@ -43,6 +43,45 @@ collections:
           - { label: Title, name: title, widget: string }
           - { label: Content, name: body, widget: markdown }
 
+      - label: Club Info
+        name: club-info
+        file: content/pages/club-info.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Content, name: body, widget: markdown }
+
+      - label: Constitution & By-Laws
+        name: constitution-by-laws
+        file: content/pages/constitution-by-laws.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Revision Note, name: revision_note, widget: string, hint: "e.g. Revision: 02/01/2020 · Adopted: 03/27/2020" }
+          - { label: Content, name: body, widget: markdown }
+
+      - label: Calendar (Google Calendar URL)
+        name: calendar-main
+        file: content/pages/calendar-main.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Google Calendar Embed URL, name: google_calendar_url, widget: string, hint: "Paste the embed URL from Google Calendar > Settings > Integrate calendar" }
+
+      - label: Regular Meetings
+        name: calendar
+        file: content/pages/calendar.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Content, name: body, widget: markdown }
+
+      - label: Education (Breed Standard)
+        name: education
+        file: content/pages/education.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string }
+          - { label: Video URL 1, name: video_url_1, widget: string, hint: "YouTube embed URL, e.g. https://www.youtube.com/embed/..." }
+          - { label: Video URL 2, name: video_url_2, widget: string, hint: "YouTube embed URL, e.g. https://www.youtube.com/embed/..." }
+          - { label: Content, name: body, widget: markdown }
+
       - label: Events
         name: events
         file: content/pages/events.md
@@ -55,16 +94,113 @@ collections:
             hint: "Upload the current event flyer image"
           - { label: Description, name: body, widget: markdown }
 
-      - label: Regular Meetings
-        name: calendar
-        file: content/pages/calendar.md
+      - label: Show Premium
+        name: show-premium
+        file: content/pages/show-premium.md
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Content, name: body, widget: markdown }
 
+      - label: Event Results
+        name: event-results
+        file: content/pages/event-results.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Content, name: body, widget: markdown }
+
+      - label: Royal Hecht Awards (Intro & Point System)
+        name: royal-hecht-awards
+        file: content/pages/royal-hecht-awards.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string }
+          - { label: Content, name: body, widget: markdown }
+
+      - label: Photo Gallery (Main Page)
+        name: photo-gallery
+        file: content/pages/photo-gallery.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Content, name: body, widget: markdown }
+
+      - label: Gallery 1
+        name: gallery-1
+        file: content/pages/gallery-1.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Date / Subtitle, name: subtitle, widget: string }
+          - { label: Description, name: body, widget: markdown }
+
+      - label: Gallery 2
+        name: gallery-2
+        file: content/pages/gallery-2.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Date / Subtitle, name: subtitle, widget: string }
+          - { label: Description, name: body, widget: markdown }
+
+      - label: Gallery 3
+        name: gallery-3
+        file: content/pages/gallery-3.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Date / Subtitle, name: subtitle, widget: string }
+          - { label: Description, name: body, widget: markdown }
+
+      - label: Gallery 4
+        name: gallery-4
+        file: content/pages/gallery-4.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Date / Subtitle, name: subtitle, widget: string }
+          - { label: Description, name: body, widget: markdown }
+
       - label: How to Join (Membership)
         name: membership
         file: content/pages/membership.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Content, name: body, widget: markdown }
+
+      - label: Breeder Directory
+        name: breeders
+        file: content/pages/breeders.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Content, name: body, widget: markdown, hint: "List breeders and the disclaimer text" }
+
+      - label: Whelping Box
+        name: whelping-box
+        file: content/pages/whelping-box.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Content, name: body, widget: markdown }
+
+      - label: Links
+        name: links
+        file: content/pages/links.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Content, name: body, widget: markdown }
+
+      - label: Rainbow Bridge
+        name: rainbow-bridge
+        file: content/pages/rainbow-bridge.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Subtitle, name: subtitle, widget: string }
+          - { label: Content, name: body, widget: markdown }
+
+      - label: Web Award
+        name: web-award
+        file: content/pages/web-award.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Content, name: body, widget: markdown }
+
+      - label: Veterinary Links
+        name: veterinary-links
+        file: content/pages/veterinary-links.md
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Content, name: body, widget: markdown }
@@ -93,3 +229,57 @@ collections:
             label_singular: Board Member
             fields:
               - { label: Name, name: name, widget: string }
+
+  - name: data
+    label: Site Data
+    files:
+      - label: Hall of Fame
+        name: hall-of-fame
+        file: content/hall-of-fame.json
+        format: json
+        fields:
+          - label: Entries
+            name: entries
+            widget: list
+            label_singular: Entry
+            fields:
+              - { label: Date, name: date, widget: string }
+              - { label: Title / Achievement, name: title, widget: string }
+              - { label: Dog, name: dog, widget: string }
+              - { label: Member(s), name: member, widget: string }
+
+      - label: "Wag 'N' Tongue Newsletters"
+        name: wag-n-tongue
+        file: content/wag-n-tongue.json
+        format: json
+        fields:
+          - label: Newsletters
+            name: newsletters
+            widget: list
+            label_singular: Newsletter
+            fields:
+              - { label: Label, name: label, widget: string, hint: "e.g. January 2018" }
+              - { label: Filename, name: file, widget: string, hint: "PDF filename in /static/Documents/Wags/, e.g. January 2018 wag.pdf" }
+
+      - label: Stud Dogs
+        name: stud-dogs
+        file: content/stud-dogs.json
+        format: json
+        fields:
+          - label: Dogs
+            name: dogs
+            widget: list
+            label_singular: Stud Dog
+            fields:
+              - { label: Registered Name, name: registered_name, widget: string }
+              - { label: Call Name, name: call_name, widget: string }
+              - { label: Date of Birth, name: dob, widget: string, required: false }
+              - { label: Stud Fee, name: stud_fee, widget: string }
+              - { label: Requirements, name: requirements, widget: string, required: false }
+              - { label: Frozen Semen, name: frozen_semen, widget: string, required: false }
+              - { label: Sire, name: sire, widget: string, required: false }
+              - { label: Dam, name: dam, widget: string, required: false }
+              - { label: Owner, name: owner, widget: string }
+              - { label: Email, name: email, widget: string }
+              - { label: Phone, name: phone, widget: string }
+              - { label: Notes, name: notes, widget: string, required: false }

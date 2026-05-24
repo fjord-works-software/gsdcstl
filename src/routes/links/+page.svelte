@@ -1,127 +1,25 @@
 <script lang="ts">
-	import { resolve } from '$app/paths';
 	import PageHeader from '$lib/components/PageHeader.svelte';
+	import type { PageData } from './$types';
+
+	const { data }: { data: PageData } = $props();
 </script>
 
 <svelte:head>
-	<title>Links — GSDCSTL</title>
+	<title>{data.title} — GSDCSTL</title>
 </svelte:head>
 
-<PageHeader title="Links" />
+<PageHeader title={data.title} />
 
-<div class="space-y-8 text-sm">
+<div class="cms-content text-sm">
+	{@html data.body}
+</div>
 
-	<section>
-		<ul class="space-y-2">
-			<li>
-				<a href="https://www.gsdca.org/" class="text-primary hover:underline" target="_blank" rel="noopener">The German Shepherd Dog Club of America</a>
-				— is our parent club. Their site has a lot of information about German Shepherd Dogs.
-			</li>
-			<li>
-				<a href="https://gsdca.org/events/junior-handling" class="text-primary hover:underline" target="_blank" rel="noopener">The German Shepherd Dog Club of America Junior Program</a>
-				— A program supporting the youth handlers, who are the future of our breed, German Shepherd Dog.
-			</li>
-			<li><a href="https://www.akc.org/" class="text-primary hover:underline" target="_blank" rel="noopener">The American Kennel Club</a></li>
-			<li><a href="https://www.onofrio.com/" class="text-primary hover:underline" target="_blank" rel="noopener">Jack Onofrio Dog Shows, LLC</a></li>
-			<li><a href="https://foytrentdogshows.com/" class="text-primary hover:underline" target="_blank" rel="noopener">Foy Trent Dog Shows, LLC</a></li>
-			<li><a href="https://infodog.com/" class="text-primary hover:underline" target="_blank" rel="noopener">Info Dog</a></li>
-		</ul>
-	</section>
-
-	<section>
-		<h2 class="text-base font-serif font-semibold text-primary-dark border-b border-gray-200 pb-1 mb-2">Important Links</h2>
-		<ul class="space-y-1">
-			<li><a href="https://www.gsdca.org/" class="text-primary hover:underline" target="_blank" rel="noopener">German Shepherd Dog Club of America</a></li>
-			<li><a href="https://www.gsdca-wda.org/" class="text-primary hover:underline" target="_blank" rel="noopener">GSDCA Working Dog Association</a></li>
-			<li><a href="https://www.akc.org/" class="text-primary hover:underline" target="_blank" rel="noopener">The American Kennel Club</a></li>
-			<li><a href="https://www.museumofthedog.org/" class="text-primary hover:underline" target="_blank" rel="noopener">The American Kennel Club Museum of the Dog</a></li>
-			<li><a href="https://www.offa.org/" class="text-primary hover:underline" target="_blank" rel="noopener">Orthopedic Foundation for Animals</a></li>
-			<li><a href="https://www.gsdca.org/GSDReviewed/index.html" class="text-primary hover:underline" target="_blank" rel="noopener">GSD Reviewed</a></li>
-			<li><a href="https://gsdcc.homestead.com/welcome.html" class="text-primary hover:underline" target="_blank" rel="noopener">German Shepherd Dog Club of Canada</a></li>
-			<li><a href="https://www.gsdleague.co.uk/" class="text-primary hover:underline" target="_blank" rel="noopener">German Shepherd Dog League of Great Britain</a></li>
-			<li><a href="https://www.schaeferhund.de/" class="text-primary hover:underline" target="_blank" rel="noopener">Germany's National German Shepherd Club</a></li>
-			<li><a href="https://www.ahba-herding.org/" class="text-primary hover:underline" target="_blank" rel="noopener">American Herding Breed Association</a></li>
-			<li><a href="https://www.mwdtsa.org/" class="text-primary hover:underline" target="_blank" rel="noopener">United Schutzhund Clubs of America / Military Working Dog Team Support Association</a></li>
-		</ul>
-	</section>
-
-	<section>
-		<h2 class="text-base font-serif font-semibold text-primary-dark border-b border-gray-200 pb-1 mb-2">Herding</h2>
-		<ul class="space-y-1">
-			<li><a href="https://www.ahba-herding.org/" class="text-primary hover:underline" target="_blank" rel="noopener">American Herding Breeds Association</a></li>
-			<li><a href="https://www.asca.org/" class="text-primary hover:underline" target="_blank" rel="noopener">Australian Shepherd Club of America</a></li>
-			<li><a href="https://www.gatewayasc.org/" class="text-primary hover:underline" target="_blank" rel="noopener">Gateway Australian Shepherd Club</a></li>
-			<li><a href="https://www.blueboniff.com/midwestherding/index.htm" class="text-primary hover:underline" target="_blank" rel="noopener">Midwest Herding Connection</a></li>
-		</ul>
-	</section>
-
-	<section>
-		<h2 class="text-base font-serif font-semibold text-primary-dark border-b border-gray-200 pb-1 mb-2">Training</h2>
-		<ul class="space-y-1">
-			<li><a href="https://www.nadac.com/" class="text-primary hover:underline" target="_blank" rel="noopener">North American Dog Agility Council, Inc.</a></li>
-			<li><a href="https://www.tdi-dog.org/" class="text-primary hover:underline" target="_blank" rel="noopener">Therapy Dogs International, Inc. (TDI)</a></li>
-			<li><a href="https://www.akc.org/events/cgc/index.cfm" class="text-primary hover:underline" target="_blank" rel="noopener">AKC's Canine Good Citizen (CGC) Program</a></li>
-			<li><a href={resolve('/Documents/Training/Satisfying%20the%20Urge%20to%20Herd.pdf' as any)} class="text-primary hover:underline" target="_blank" rel="noopener">Satisfying the Urge to Herd (PDF)</a></li>
-		</ul>
-	</section>
-
-	<section>
-		<h2 class="text-base font-serif font-semibold text-primary-dark border-b border-gray-200 pb-1 mb-2">Dog Show Superintendents</h2>
-		<ul class="space-y-1">
-			<li><a href="https://www.onofrio.com/" class="text-primary hover:underline" target="_blank" rel="noopener">Onofrio Dog Shows</a></li>
-			<li><a href="https://foytrentdogshows.com/" class="text-primary hover:underline" target="_blank" rel="noopener">Foy Trent Dog Shows</a></li>
-			<li><a href="https://www.bleakneyshowservices.com/" class="text-primary hover:underline" target="_blank" rel="noopener">Margaret Bleakney Shows</a></li>
-			<li><a href="https://infodog.com/" class="text-primary hover:underline" target="_blank" rel="noopener">MB-F (Infodog) Dog Shows</a></li>
-		</ul>
-	</section>
-
-	<section>
-		<h2 class="text-base font-serif font-semibold text-primary-dark border-b border-gray-200 pb-1 mb-2">Regional GSD Clubs</h2>
-		<ul class="space-y-1">
-			<li><a href="https://www.gsdca.org/join-the-gsdca/regional-clubs" class="text-primary hover:underline" target="_blank" rel="noopener">Regional German Shepherd Dog Club Links</a></li>
-		</ul>
-	</section>
-
-	<section>
-		<h2 class="text-base font-serif font-semibold text-primary-dark border-b border-gray-200 pb-1 mb-2">Rescue</h2>
-		<ul class="space-y-1">
-			<li><a href="https://www.agsra.com/" class="text-primary hover:underline" target="_blank" rel="noopener">German Shepherd Dog Club of America — Breed Rescue</a></li>
-			<li><a href="https://www.agsra.com/" class="text-primary hover:underline" target="_blank" rel="noopener">American German Shepherd Dog Rescue Association</a></li>
-			<li><a href="https://www.caninepetrescue.com/home/" class="text-primary hover:underline" target="_blank" rel="noopener">Canine Pet Rescue</a></li>
-			<li><a href="https://www.serendipitygsd.org/" class="text-primary hover:underline" target="_blank" rel="noopener">Serendipity German Shepherd Dog Rescue</a></li>
-			<li><a href="https://www.pawstoppersinc.com/" class="text-primary hover:underline" target="_blank" rel="noopener">PAWStoppers</a></li>
-		</ul>
-	</section>
-
-	<section>
-		<h2 class="text-base font-serif font-semibold text-primary-dark border-b border-gray-200 pb-1 mb-2">St. Louis Weather</h2>
-		<ul class="space-y-1">
-			<li><a href="https://forecast.weather.gov/MapClick.php?lat=38.489775&lon=-90.81680080000001&site=all&smap=1&searchresult=Gray%20Summit%2C%20MO%2C%20USA" class="text-primary hover:underline" target="_blank" rel="noopener">Forecast — National Weather Service — Gray Summit</a></li>
-			<li><a href="https://abcstlouis.com/weather/radar" class="text-primary hover:underline" target="_blank" rel="noopener">ABC-Channel 30 Weather (KDNL) — Interactive Radar</a></li>
-		</ul>
-	</section>
-
-	<section>
-		<h2 class="text-base font-serif font-semibold text-primary-dark border-b border-gray-200 pb-1 mb-2">Other Links of Interest</h2>
-		<ul class="space-y-1">
-			<li><a href="https://www.offa.org/" class="text-primary hover:underline" target="_blank" rel="noopener">OFA — Orthopedic Foundation for Animals</a></li>
-		</ul>
-	</section>
-
-	<section>
-		<h2 class="text-base font-serif font-semibold text-primary-dark border-b border-gray-200 pb-1 mb-2">Recipes</h2>
-		<ul class="space-y-1">
-			<li><a href={resolve('/Documents/Beef%20Liver%20Bait.pdf' as any)} class="text-primary hover:underline" target="_blank" rel="noopener">Beef Liver Cake / Beef Liver Bait (PDF)</a></li>
-		</ul>
-	</section>
-
-	<section>
-		<h2 class="text-base font-serif font-semibold text-primary-dark border-b border-gray-200 pb-1 mb-2">More Links</h2>
-		<ul class="space-y-1">
-			<li><a href={resolve('/links/veterinary-links')} class="text-primary hover:underline">Veterinary &amp; Medical Links</a></li>
-			<li><a href={resolve('/links/rainbow-bridge')} class="text-primary hover:underline">Rainbow Bridge</a></li>
-			<li><a href={resolve('/links/web-award')} class="text-primary hover:underline">Web Award</a></li>
-		</ul>
-	</section>
-
+<div class="mt-8 pt-4 border-t border-gray-200 text-sm space-y-1">
+	<p class="font-semibold text-primary-dark text-base mb-2">More Links</p>
+	<ul class="space-y-1">
+		<li><a href="/links/veterinary-links" class="text-primary hover:underline">Veterinary &amp; Medical Links</a></li>
+		<li><a href="/links/rainbow-bridge" class="text-primary hover:underline">Rainbow Bridge</a></li>
+		<li><a href="/links/web-award" class="text-primary hover:underline">Web Award</a></li>
+	</ul>
 </div>
