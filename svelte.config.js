@@ -8,7 +8,7 @@ const config = {
 	},
 	kit: {
 		paths: {
-			base: '/gsdcstl'
+			base: ''
 		},
 		adapter: adapter({
 			pages: 'build',
