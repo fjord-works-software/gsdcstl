@@ -1,0 +1,70 @@
+{
+  "year": 2021,
+  "date": "March 15, 2022",
+  "chairperson": "Laura Marrocco",
+  "members": [
+    {
+      "name": "Pam Aman",
+      "awards": [
+        {
+          "category": "Canine Good Citizen (AKC)",
+          "detail": "Frankenhaus Afterburner \"Buck\""
+        }
+      ]
+    },
+    {
+      "name": "Steve Dobbins (JoAnn Richards)",
+      "awards": [
+        {
+          "category": "Champion (AKC)",
+          "detail": "Cimarron-Joelle Captain Obvious \"Captain\""
+        }
+      ]
+    },
+    {
+      "name": "Steve Dobbins",
+      "awards": [
+        {
+          "category": "Champion (AKC)",
+          "detail": "Cimarron's She's Got Legs She Knows How To Use Them \"Legs\""
+        }
+      ]
+    },
+    {
+      "name": "Jayne Faupl",
+      "awards": [
+        {
+          "category": "Champion (AKC)",
+          "detail": "Guardians 2Kiss A Thief V Rochill \"Vee\""
+        }
+      ]
+    },
+    {
+      "name": "Jayne Faupl",
+      "awards": [
+        {
+          "category": "Grand Champion (AKC) & Grand Champion Bronze (AKC)",
+          "detail": "CH Guardian's NoNo Noelle V Rochill \"Noelle\""
+        }
+      ]
+    },
+    {
+      "name": "Elizabeth and Scott Hotaling, Gail and Herman Stiefferman",
+      "awards": [
+        {
+          "category": "Best Puppy (GSDCSTL)",
+          "detail": "Forest Knoll's Island In The Sky \"Sky\""
+        }
+      ]
+    },
+    {
+      "name": "Steve Dobbins",
+      "awards": [
+        {
+          "category": "Best Bred By/Royal Hecht Award (GSDCSTL)",
+          "detail": "Cimarron's This Is What Dreams Are Made Of"
+        }
+      ]
+    }
+  ]
+}

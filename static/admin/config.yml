@@ -4,8 +4,8 @@ backend:
   branch: main
   base_url: https://sveltia-cms-auth.fjordworkssoftware.workers.dev
 
-media_folder: static/images/uploads
-public_folder: /images/uploads
+media_folder: static/images
+public_folder: /images
 
 # Collections mirror the site navigation (src/lib/nav.ts) so an editor finds a
 # page in the admin the same way they find it on the site. Keep the two in sync.
@@ -18,6 +18,14 @@ collections:
         file: content/pages/home.md
         fields:
           - { label: Title, name: title, widget: string }
+          - label: Banner Slides
+            name: slides
+            widget: list
+            label_singular: Slide
+            summary: "{{fields.alt}}"
+            fields:
+              - { label: Image, name: image, widget: image }
+              - { label: Alt Text, name: alt, widget: string, hint: "Describes the image for screen readers" }
           - { label: Content, name: body, widget: markdown }
 
   - name: club-info
@@ -192,6 +200,36 @@ collections:
           - { label: Subtitle, name: subtitle, widget: string }
           - { label: Content, name: body, widget: markdown }
 
+  - name: royal-hecht-years
+    label: Royal Hecht Years
+    label_singular: Year
+    folder: content/royal-hecht
+    create: true
+    extension: json
+    format: json
+    slug: "{{fields.year}}"
+    identifier_field: year
+    summary: "{{fields.year}}"
+    fields:
+      - { label: Year, name: year, widget: number, value_type: int }
+      - { label: Ceremony Date, name: date, widget: string, required: false, hint: "e.g. April 21, 2026" }
+      - { label: Chairperson, name: chairperson, widget: string, required: false }
+      - label: Members
+        name: members
+        widget: list
+        label_singular: Member
+        summary: "{{fields.name}}"
+        fields:
+          - { label: Member(s), name: name, widget: string }
+          - label: Awards
+            name: awards
+            widget: list
+            label_singular: Award
+            summary: "{{fields.category}}"
+            fields:
+              - { label: Award / Title, name: category, widget: string }
+              - { label: Dog / Detail, name: detail, widget: string, required: false }
+
   - divider: true
 
   - name: photo-gallery
@@ -207,34 +245,74 @@ collections:
       - label: Gallery 1
         name: gallery-1
         file: content/pages/gallery-1.md
+        media_folder: /static/images/gallery-1
+        public_folder: /images/gallery-1
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Date / Subtitle, name: subtitle, widget: string }
           - { label: Description, name: body, widget: markdown }
+          - label: Photos
+            name: photos
+            widget: list
+            label_singular: Photo
+            summary: "{{fields.caption}}"
+            fields:
+              - { label: Image, name: image, widget: image }
+              - { label: Caption, name: caption, widget: string, hint: "Who/what is pictured. Also used as alt text." }
 
       - label: Gallery 2
         name: gallery-2
         file: content/pages/gallery-2.md
+        media_folder: /static/images/gallery-2
+        public_folder: /images/gallery-2
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Date / Subtitle, name: subtitle, widget: string }
           - { label: Description, name: body, widget: markdown }
+          - label: Photos
+            name: photos
+            widget: list
+            label_singular: Photo
+            summary: "{{fields.caption}}"
+            fields:
+              - { label: Image, name: image, widget: image }
+              - { label: Caption, name: caption, widget: string, hint: "Who/what is pictured. Also used as alt text." }
 
       - label: Gallery 3
         name: gallery-3
         file: content/pages/gallery-3.md
+        media_folder: /static/images/gallery-3
+        public_folder: /images/gallery-3
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Date / Subtitle, name: subtitle, widget: string }
           - { label: Description, name: body, widget: markdown }
+          - label: Photos
+            name: photos
+            widget: list
+            label_singular: Photo
+            summary: "{{fields.caption}}"
+            fields:
+              - { label: Image, name: image, widget: image }
+              - { label: Caption, name: caption, widget: string, hint: "Who/what is pictured. Also used as alt text." }
 
       - label: Gallery 4
         name: gallery-4
         file: content/pages/gallery-4.md
+        media_folder: /static/images/gallery-4
+        public_folder: /images/gallery-4
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Date / Subtitle, name: subtitle, widget: string }
           - { label: Description, name: body, widget: markdown }
+          - label: Photos
+            name: photos
+            widget: list
+            label_singular: Photo
+            summary: "{{fields.caption}}"
+            fields:
+              - { label: Image, name: image, widget: image }
+              - { label: Caption, name: caption, widget: string, hint: "Who/what is pictured. Also used as alt text." }
 
   - name: breeders
     label: Breeders

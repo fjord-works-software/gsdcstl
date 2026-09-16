@@ -1,0 +1,79 @@
+{
+  "year": 2009,
+  "date": null,
+  "chairperson": null,
+  "members": [
+    {
+      "name": "Steve Dobbins",
+      "awards": [
+        {
+          "category": "Champion",
+          "detail": "Ch. Cimarron's You Got Lucky, T.C."
+        }
+      ]
+    },
+    {
+      "name": "Steve Dobbins",
+      "awards": [
+        {
+          "category": "Best Puppy Award",
+          "detail": "Cimarron's Don't Stop Believin'"
+        }
+      ]
+    },
+    {
+      "name": "Steve Dobbins",
+      "awards": [
+        {
+          "category": "Royal Hecht Bred By Exhibitor Award",
+          "detail": "Cimarron's Running Down A Dream, T.C."
+        }
+      ]
+    },
+    {
+      "name": "Joan Senyard",
+      "awards": [
+        {
+          "category": "Obedience Master I, Utility Dog Excellent, & Rally Excellent",
+          "detail": "Lochinvar's Jodi, O.M.I, U.D.X., O.A., N.A.J., R.E."
+        }
+      ]
+    },
+    {
+      "name": "Joan Senyard",
+      "awards": [
+        {
+          "category": "Companion Dog Excellent, Utility Dog, & Novice Agility",
+          "detail": "Evermor's Grand Leader, U.D., N.A., R.A."
+        }
+      ]
+    },
+    {
+      "name": "Joan Senyard",
+      "awards": [
+        {
+          "category": "Rally Novice",
+          "detail": "Lochinvar's Sir Patrick, R.N."
+        }
+      ]
+    },
+    {
+      "name": "Elaine Bisbing",
+      "awards": [
+        {
+          "category": "Companion Dog",
+          "detail": "Doulton Royale Von Regenforst, C.D."
+        }
+      ]
+    },
+    {
+      "name": "Helen Rockman",
+      "awards": [
+        {
+          "category": "Rally Excellent",
+          "detail": "Robert's Brianna Leigh, C.D., R.E."
+        }
+      ]
+    }
+  ]
+}

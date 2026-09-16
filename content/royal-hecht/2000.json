@@ -1,0 +1,88 @@
+{
+  "year": 2000,
+  "date": null,
+  "chairperson": "Marcia Hadley",
+  "members": [
+    {
+      "name": "Ilona Horn",
+      "awards": [
+        {
+          "category": "Temperament Certified",
+          "detail": "Andrew Von Dukehorn, HIC, TT, TC"
+        }
+      ]
+    },
+    {
+      "name": "John Hoffman",
+      "awards": [
+        {
+          "category": "National Agility Victrix",
+          "detail": "Britta Von Wadekamper, CD, MX, MXJ, TC, HIC, CGC, BH"
+        }
+      ]
+    },
+    {
+      "name": "Karen Hynek",
+      "awards": [
+        {
+          "category": "Champion",
+          "detail": "Ch. Chilmark's Lyn' Eyes Reata"
+        }
+      ]
+    },
+    {
+      "name": "Gail Stiefferman, Barbara Gambill, & John LaFata",
+      "awards": [
+        {
+          "category": "Champion",
+          "detail": "Ch. Chlomaxsi Estileta Forst Knoll"
+        }
+      ]
+    },
+    {
+      "name": "Steve Dobbins",
+      "awards": [
+        {
+          "category": "Royal Hecht Bred By Exhibitor Award",
+          "detail": "Cimarron's Margarita"
+        }
+      ]
+    },
+    {
+      "name": "Steve Dobbins",
+      "awards": [
+        {
+          "category": "Companion Dog & GSDC Novice Obedience Award & Dual Award",
+          "detail": "Am/Can Ch. Cimarron's Rhiannon, CD"
+        }
+      ]
+    },
+    {
+      "name": "Ricky & Greg Harrison",
+      "awards": [
+        {
+          "category": "South West Best Opposite Maturity",
+          "detail": "1999 SWBIF/2000 SWBOM Hadori's Stone Cold"
+        }
+      ]
+    },
+    {
+      "name": "Ricky Harrison & Janet Ingalls",
+      "awards": [
+        {
+          "category": "Champion",
+          "detail": "Ch. Jadon's Weekend Rendezvous"
+        }
+      ]
+    },
+    {
+      "name": "Alice Becker & Barbara & Lee Trapp",
+      "awards": [
+        {
+          "category": "GSDC Best Puppy Award",
+          "detail": "LeBarland's Getty Lee"
+        }
+      ]
+    }
+  ]
+}

@@ -1,5 +1,10 @@
 ---
 title: About Us
+slides:
+  - image: /images/slide790.jpg
+    alt: German Shepherd Dog Club of St. Louis
+  - image: /images/slide791.jpg
+    alt: German Shepherd Dog Club of St. Louis
 ---
 The members of the German Shepherd Dog Club of St. Louis, Inc. would like to introduce ourselves to you and invite you to come meet us.
 
