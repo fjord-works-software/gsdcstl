@@ -7,13 +7,13 @@
 </script>
 
 <svelte:head>
-	<title>Gallery 2 — GSDCSTL</title>
+	<title>{data.gallery.title} — GSDCSTL</title>
 </svelte:head>
 
-<PageHeader title={data.title} subtitle={data.subtitle} />
+<PageHeader title={data.gallery.title} subtitle={data.gallery.subtitle} />
 
 <div class="cms-content mb-6">
-	{@html data.body}
+	{@html data.gallery.body}
 </div>
 
-<PhotoGallery photos={data.photos} />
+<PhotoGallery photos={data.gallery.photos} />

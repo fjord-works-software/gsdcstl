@@ -17,13 +17,23 @@
 </div>
 
 <h2 class="text-lg font-serif font-semibold text-primary-dark mb-2 mt-6">Photo Galleries</h2>
-<ul class="space-y-2 text-sm">
-	{#each data.galleries as gallery}
-		<li>
-			<a href={resolve(gallery.href as any)} class="text-primary hover:underline">
-				{gallery.label} — {gallery.title}
-			</a>
-			<span class="text-gray-500">({gallery.count} photos)</span>
-		</li>
-	{/each}
-</ul>
+{#if data.galleries.length === 0}
+	<p class="text-gray-400 text-sm italic">No galleries yet.</p>
+{:else}
+	<ul class="space-y-2 text-sm">
+		{#each data.galleries as gallery}
+			<li>
+				<a
+					href={resolve('/photo-gallery/[slug]', { slug: gallery.slug })}
+					class="text-primary hover:underline font-medium"
+				>
+					{gallery.title}
+				</a>
+				{#if gallery.subtitle}
+					<span class="text-gray-600"> — {gallery.subtitle}</span>
+				{/if}
+				<span class="text-gray-500"> ({gallery.count} photos)</span>
+			</li>
+		{/each}
+	</ul>
+{/if}

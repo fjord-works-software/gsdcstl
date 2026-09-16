@@ -1,6 +1,7 @@
 ---
 title: 2011 GSDC of St. Louis Royal Hecht Awards Ceremony
 subtitle: 'February 24, 2012'
+order: 4
 photos:
   - image: /images/gallery-4/02242012dannieandrocky.jpg
     caption: Dannie and Rocky

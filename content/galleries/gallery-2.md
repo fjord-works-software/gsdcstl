@@ -1,6 +1,7 @@
 ---
 title: 2013 GSDC of St. Louis K9 Awards Ceremony
 subtitle: 'September 15, 2013'
+order: 2
 photos:
   - image: /images/gallery-2/rothandbellsaandt.jpg
     caption: Roth and Bell — Suspect Apprehension & Tracking

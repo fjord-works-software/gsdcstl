@@ -242,77 +242,33 @@ collections:
           - { label: Title, name: title, widget: string }
           - { label: Content, name: body, widget: markdown }
 
-      - label: Gallery 1
-        name: gallery-1
-        file: content/pages/gallery-1.md
-        media_folder: /static/images/gallery-1
-        public_folder: /images/gallery-1
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Date / Subtitle, name: subtitle, widget: string }
-          - { label: Description, name: body, widget: markdown }
-          - label: Photos
-            name: photos
-            widget: list
-            label_singular: Photo
-            summary: "{{fields.caption}}"
-            fields:
-              - { label: Image, name: image, widget: image }
-              - { label: Caption, name: caption, widget: string, hint: "Who/what is pictured. Also used as alt text." }
 
-      - label: Gallery 2
-        name: gallery-2
-        file: content/pages/gallery-2.md
-        media_folder: /static/images/gallery-2
-        public_folder: /images/gallery-2
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Date / Subtitle, name: subtitle, widget: string }
-          - { label: Description, name: body, widget: markdown }
-          - label: Photos
-            name: photos
-            widget: list
-            label_singular: Photo
-            summary: "{{fields.caption}}"
-            fields:
-              - { label: Image, name: image, widget: image }
-              - { label: Caption, name: caption, widget: string, hint: "Who/what is pictured. Also used as alt text." }
 
-      - label: Gallery 3
-        name: gallery-3
-        file: content/pages/gallery-3.md
-        media_folder: /static/images/gallery-3
-        public_folder: /images/gallery-3
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Date / Subtitle, name: subtitle, widget: string }
-          - { label: Description, name: body, widget: markdown }
-          - label: Photos
-            name: photos
-            widget: list
-            label_singular: Photo
-            summary: "{{fields.caption}}"
-            fields:
-              - { label: Image, name: image, widget: image }
-              - { label: Caption, name: caption, widget: string, hint: "Who/what is pictured. Also used as alt text." }
 
-      - label: Gallery 4
-        name: gallery-4
-        file: content/pages/gallery-4.md
-        media_folder: /static/images/gallery-4
-        public_folder: /images/gallery-4
+
+  - name: galleries
+    label: Galleries
+    label_singular: Gallery
+    folder: content/galleries
+    create: true
+    media_folder: "{{media_folder}}/{{slug}}"
+    public_folder: "{{public_folder}}/{{slug}}"
+    identifier_field: title
+    summary: "{{fields.order}}. {{fields.title}}"
+    sortable_fields: [order, title]
+    fields:
+      - { label: Title, name: title, widget: string, hint: "Shown in the nav, on the gallery index and as the page heading" }
+      - { label: Date / Subtitle, name: subtitle, widget: string, required: false }
+      - { label: Order, name: order, widget: number, value_type: int, hint: "Lower numbers come first in the nav and on the index" }
+      - { label: Description, name: body, widget: markdown, required: false }
+      - label: Photos
+        name: photos
+        widget: list
+        label_singular: Photo
+        summary: "{{fields.caption}}"
         fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Date / Subtitle, name: subtitle, widget: string }
-          - { label: Description, name: body, widget: markdown }
-          - label: Photos
-            name: photos
-            widget: list
-            label_singular: Photo
-            summary: "{{fields.caption}}"
-            fields:
-              - { label: Image, name: image, widget: image }
-              - { label: Caption, name: caption, widget: string, hint: "Who/what is pictured. Also used as alt text." }
+          - { label: Image, name: image, widget: image }
+          - { label: Caption, name: caption, widget: string, hint: "Who/what is pictured. Also used as alt text." }
 
   - name: breeders
     label: Breeders

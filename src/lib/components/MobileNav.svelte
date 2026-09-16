@@ -1,7 +1,9 @@
 <script lang="ts">
 	import { slide } from 'svelte/transition';
 	import { resolve } from '$app/paths';
-	import { navItems } from '$lib/nav';
+	import { navItems, type NavItem } from '$lib/nav';
+
+	let { items = navItems }: { items?: NavItem[] } = $props();
 
 	let open = $state(false);
 	let expanded = $state(new Set<string>());
@@ -39,7 +41,7 @@
 
 	{#if open}
 		<ul transition:slide={{ duration: 200 }} class="border-t border-primary">
-			{#each navItems as item}
+			{#each items as item}
 				<li class="border-b border-primary last:border-b-0">
 					{#if item.href && item.children}
 						<div class="flex items-stretch">

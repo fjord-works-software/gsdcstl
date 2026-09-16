@@ -1,20 +1,22 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { resolve } from '$app/paths';
-	import { navItems } from '$lib/nav';
+	import { navItems, type NavItem } from '$lib/nav';
+
+	let { items = navItems }: { items?: NavItem[] } = $props();
 
 	function isActive(href: string) {
 		return $page.url.pathname === resolve(href as any);
 	}
 
-	function hasActiveChild(children: typeof navItems) {
+	function hasActiveChild(children: NavItem[]) {
 		return children.some((c) => c.href && isActive(c.href));
 	}
 </script>
 
 <nav class="bg-primary-dark">
 	<ul class="max-w-5xl mx-auto px-4 flex flex-wrap">
-		{#each navItems as item}
+		{#each items as item}
 			<li class="relative group">
 				{#if item.href && item.children}
 					<a

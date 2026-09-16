@@ -1,6 +1,7 @@
 ---
 title: 2026 GSDC of St. Louis Awards Ceremony
 subtitle: 'April 21, 2026'
+order: 1
 photos:
   - image: /images/gallery-1/678767082_122094941444427772_2341627369910192194_n.jpg
     caption: Gallery 1 photo 1

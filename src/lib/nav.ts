@@ -66,3 +66,23 @@ export const navItems: NavItem[] = [
 		]
 	}
 ];
+
+export type GalleryLink = { slug: string; title: string };
+
+/**
+ * Photo Gallery children come from the CMS, so galleries added, renamed or
+ * reordered there show up in the nav without a code change.
+ */
+export function navWithGalleries(galleries: GalleryLink[]): NavItem[] {
+	return navItems.map((item) =>
+		item.href === '/photo-gallery'
+			? {
+					...item,
+					children: galleries.map((g) => ({
+						label: g.title,
+						href: `/photo-gallery/${g.slug}`
+					}))
+				}
+			: item
+	);
+}

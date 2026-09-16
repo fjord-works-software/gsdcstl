@@ -1,6 +1,7 @@
 ---
 title: 2013 GSDC of St. Louis Awards Ceremony
 subtitle: 'March 29, 2013'
+order: 3
 photos:
   - image: /images/gallery-3/03292013dannierocky.jpg
     caption: Dannie and Rocky
