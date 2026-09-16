@@ -7,34 +7,11 @@ backend:
 media_folder: static/images/uploads
 public_folder: /images/uploads
 
+# Collections mirror the site navigation (src/lib/nav.ts) so an editor finds a
+# page in the admin the same way they find it on the site. Keep the two in sync.
 collections:
-  - name: brags
-    label: Brags
-    label_singular: Brag
-    folder: content/brags
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
-      - label: Title
-        name: title
-        widget: string
-        hint: "Full registered name and nickname, e.g. CH Guardians Gold Medal — 'Blondie'"
-      - label: Date
-        name: date
-        widget: datetime
-        type: date
-        format: YYYY-MM-DD
-      - label: Photo
-        name: image
-        widget: image
-        required: false
-      - label: Content
-        name: body
-        widget: markdown
-        hint: "Include pedigree info (sire, dam, owners), show results, and any other details"
-
-  - name: pages
-    label: Pages
+  - name: home
+    label: Home
     files:
       - label: Home Page
         name: home
@@ -43,6 +20,9 @@ collections:
           - { label: Title, name: title, widget: string }
           - { label: Content, name: body, widget: markdown }
 
+  - name: club-info
+    label: Club Info
+    files:
       - label: Club Info
         name: club-info
         file: content/pages/club-info.md
@@ -58,6 +38,38 @@ collections:
           - { label: Revision Note, name: revision_note, widget: string, hint: "e.g. Revision: 02/01/2020 · Adopted: 03/27/2020" }
           - { label: Content, name: body, widget: markdown }
 
+      - label: Club Contacts
+        name: contacts
+        file: content/contacts.json
+        format: json
+        fields:
+          - { label: Year, name: year, widget: string }
+          - { label: Club Phone, name: phone, widget: string }
+          - label: Officers
+            name: officers
+            widget: list
+            label_singular: Officer
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Name, name: name, widget: string }
+              - { label: Email, name: email, widget: string }
+          - label: Board of Directors
+            name: board
+            widget: list
+            label_singular: Board Member
+            fields:
+              - { label: Name, name: name, widget: string }
+
+      - label: Club Membership
+        name: membership
+        file: content/pages/membership.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Content, name: body, widget: markdown }
+
+  - name: calendar
+    label: Calendar
+    files:
       - label: Calendar (Google Calendar URL)
         name: calendar-main
         file: content/pages/calendar-main.md
@@ -72,6 +84,9 @@ collections:
           - { label: Title, name: title, widget: string }
           - { label: Content, name: body, widget: markdown }
 
+  - name: education
+    label: Education
+    files:
       - label: Education (Breed Standard)
         name: education
         file: content/pages/education.md
@@ -82,6 +97,9 @@ collections:
           - { label: Video URL 2, name: video_url_2, widget: string, hint: "YouTube embed URL, e.g. https://www.youtube.com/embed/..." }
           - { label: Content, name: body, widget: markdown }
 
+  - name: events
+    label: Events
+    files:
       - label: Events
         name: events
         file: content/pages/events.md
@@ -108,6 +126,64 @@ collections:
           - { label: Title, name: title, widget: string }
           - { label: Content, name: body, widget: markdown }
 
+  - divider: true
+
+  - name: brags
+    label: Brag Entries
+    label_singular: Brag
+    folder: content/brags
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - label: Title
+        name: title
+        widget: string
+        hint: "Full registered name and nickname, e.g. CH Guardians Gold Medal — 'Blondie'"
+      - label: Date
+        name: date
+        widget: datetime
+        type: date
+        format: YYYY-MM-DD
+      - label: Photo
+        name: image
+        widget: image
+        required: false
+      - label: Content
+        name: body
+        widget: markdown
+        hint: "Include pedigree info (sire, dam, owners), show results, and any other details"
+
+  - name: brags-pages
+    label: Brags
+    files:
+      - label: Hall of Fame
+        name: hall-of-fame
+        file: content/hall-of-fame.json
+        format: json
+        fields:
+          - label: Entries
+            name: entries
+            widget: list
+            label_singular: Entry
+            fields:
+              - { label: Date, name: date, widget: string }
+              - { label: Title / Achievement, name: title, widget: string }
+              - { label: Dog, name: dog, widget: string }
+              - { label: Member(s), name: member, widget: string }
+
+      - label: "Wag 'N' Tongue Newsletters"
+        name: wag-n-tongue
+        file: content/wag-n-tongue.json
+        format: json
+        fields:
+          - label: Newsletters
+            name: newsletters
+            widget: list
+            label_singular: Newsletter
+            fields:
+              - { label: Label, name: label, widget: string, hint: "e.g. January 2018" }
+              - { label: Filename, name: file, widget: string, hint: "PDF filename in /static/Documents/Wags/, e.g. January 2018 wag.pdf" }
+
       - label: Royal Hecht Awards (Intro & Point System)
         name: royal-hecht-awards
         file: content/pages/royal-hecht-awards.md
@@ -116,6 +192,11 @@ collections:
           - { label: Subtitle, name: subtitle, widget: string }
           - { label: Content, name: body, widget: markdown }
 
+  - divider: true
+
+  - name: photo-gallery
+    label: Photo Gallery
+    files:
       - label: Photo Gallery (Main Page)
         name: photo-gallery
         file: content/pages/photo-gallery.md
@@ -155,19 +236,38 @@ collections:
           - { label: Date / Subtitle, name: subtitle, widget: string }
           - { label: Description, name: body, widget: markdown }
 
-      - label: How to Join (Membership)
-        name: membership
-        file: content/pages/membership.md
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Content, name: body, widget: markdown }
-
+  - name: breeders
+    label: Breeders
+    files:
       - label: Breeder Directory
         name: breeders
         file: content/pages/breeders.md
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Content, name: body, widget: markdown, hint: "List breeders and the disclaimer text" }
+
+      - label: Stud Dogs
+        name: stud-dogs
+        file: content/stud-dogs.json
+        format: json
+        fields:
+          - label: Dogs
+            name: dogs
+            widget: list
+            label_singular: Stud Dog
+            fields:
+              - { label: Registered Name, name: registered_name, widget: string }
+              - { label: Call Name, name: call_name, widget: string }
+              - { label: Date of Birth, name: dob, widget: string, required: false }
+              - { label: Stud Fee, name: stud_fee, widget: string }
+              - { label: Requirements, name: requirements, widget: string, required: false }
+              - { label: Frozen Semen, name: frozen_semen, widget: string, required: false }
+              - { label: Sire, name: sire, widget: string, required: false }
+              - { label: Dam, name: dam, widget: string, required: false }
+              - { label: Owner, name: owner, widget: string }
+              - { label: Email, name: email, widget: string }
+              - { label: Phone, name: phone, widget: string }
+              - { label: Notes, name: notes, widget: string, required: false }
 
       - label: Whelping Box
         name: whelping-box
@@ -176,6 +276,9 @@ collections:
           - { label: Title, name: title, widget: string }
           - { label: Content, name: body, widget: markdown }
 
+  - name: links
+    label: Links
+    files:
       - label: Links
         name: links
         file: content/pages/links.md
@@ -204,82 +307,3 @@ collections:
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Content, name: body, widget: markdown }
-
-  - name: contacts
-    label: Club Contacts
-    files:
-      - label: Officers & Board
-        name: contacts
-        file: content/contacts.json
-        format: json
-        fields:
-          - { label: Year, name: year, widget: string }
-          - { label: Club Phone, name: phone, widget: string }
-          - label: Officers
-            name: officers
-            widget: list
-            label_singular: Officer
-            fields:
-              - { label: Title, name: title, widget: string }
-              - { label: Name, name: name, widget: string }
-              - { label: Email, name: email, widget: string }
-          - label: Board of Directors
-            name: board
-            widget: list
-            label_singular: Board Member
-            fields:
-              - { label: Name, name: name, widget: string }
-
-  - name: data
-    label: Site Data
-    files:
-      - label: Hall of Fame
-        name: hall-of-fame
-        file: content/hall-of-fame.json
-        format: json
-        fields:
-          - label: Entries
-            name: entries
-            widget: list
-            label_singular: Entry
-            fields:
-              - { label: Date, name: date, widget: string }
-              - { label: Title / Achievement, name: title, widget: string }
-              - { label: Dog, name: dog, widget: string }
-              - { label: Member(s), name: member, widget: string }
-
-      - label: "Wag 'N' Tongue Newsletters"
-        name: wag-n-tongue
-        file: content/wag-n-tongue.json
-        format: json
-        fields:
-          - label: Newsletters
-            name: newsletters
-            widget: list
-            label_singular: Newsletter
-            fields:
-              - { label: Label, name: label, widget: string, hint: "e.g. January 2018" }
-              - { label: Filename, name: file, widget: string, hint: "PDF filename in /static/Documents/Wags/, e.g. January 2018 wag.pdf" }
-
-      - label: Stud Dogs
-        name: stud-dogs
-        file: content/stud-dogs.json
-        format: json
-        fields:
-          - label: Dogs
-            name: dogs
-            widget: list
-            label_singular: Stud Dog
-            fields:
-              - { label: Registered Name, name: registered_name, widget: string }
-              - { label: Call Name, name: call_name, widget: string }
-              - { label: Date of Birth, name: dob, widget: string, required: false }
-              - { label: Stud Fee, name: stud_fee, widget: string }
-              - { label: Requirements, name: requirements, widget: string, required: false }
-              - { label: Frozen Semen, name: frozen_semen, widget: string, required: false }
-              - { label: Sire, name: sire, widget: string, required: false }
-              - { label: Dam, name: dam, widget: string, required: false }
-              - { label: Owner, name: owner, widget: string }
-              - { label: Email, name: email, widget: string }
-              - { label: Phone, name: phone, widget: string }
-              - { label: Notes, name: notes, widget: string, required: false }
