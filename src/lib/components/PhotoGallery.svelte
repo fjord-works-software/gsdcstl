@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { asset } from '$app/paths';
+	import type { Asset } from '$app/types';
 	import Lightbox from './Lightbox.svelte';
 	import type { Photo } from '$lib/photos';
 
@@ -7,7 +9,8 @@
 	}
 	let { photos = [] }: Props = $props();
 
-	const images = $derived(photos.map((p) => p.image));
+	// Image paths come from CMS content, so they're plain strings, not typed Asset literals.
+	const images = $derived(photos.map((p) => asset(p.image as Asset)));
 	const alts = $derived(photos.map((p) => p.caption ?? ''));
 
 	let lightboxOpen = $state(false);
@@ -30,7 +33,7 @@
 				aria-label={photo.caption || `View image ${i + 1}`}
 			>
 				<img
-					src={photo.image}
+					src={images[i]}
 					alt={photo.caption ?? ''}
 					class="w-full aspect-square object-cover hover:opacity-80 transition-opacity"
 				/>
