@@ -1,11 +1,9 @@
 import type { PageServerLoad } from './$types';
 import matter from 'gray-matter';
-import raw from '../../../content/pages/calendar-main.md?raw';
+import { marked } from '$lib/markdown';
+import raw from '../../../content/pages/calendar.md?raw';
 
 export const load: PageServerLoad = () => {
-	const { data } = matter(raw);
-	return {
-		title: data.title as string,
-		google_calendar_url: data.google_calendar_url as string
-	};
+	const { data, content } = matter(raw);
+	return { title: data.title as string, body: marked.parse(content) as string };
 };

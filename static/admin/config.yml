@@ -79,13 +79,6 @@ collections:
   - name: calendar
     label: Calendar
     files:
-      - label: Calendar (Google Calendar URL)
-        name: calendar-main
-        file: content/pages/calendar-main.md
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: Google Calendar Embed URL, name: google_calendar_url, widget: string, hint: "Paste the embed URL from Google Calendar > Settings > Integrate calendar" }
-
       - label: Regular Meetings
         name: calendar
         file: content/pages/calendar.md

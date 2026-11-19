@@ -15,11 +15,7 @@ export const navItems: NavItem[] = [
 			{ label: 'Club Membership', href: '/club-info/club-membership' }
 		]
 	},
-	{
-		label: 'Calendar',
-		href: '/calendar',
-		children: [{ label: 'Regular GSDCSTL Meetings', href: '/calendar/regular-meetings' }]
-	},
+	{ label: 'Calendar', href: '/calendar' },
 	{ label: 'Education', href: '/education' },
 	{
 		label: 'Events',
