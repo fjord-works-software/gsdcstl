@@ -43,9 +43,7 @@ export const navItems: NavItem[] = [
 		href: '/photo-gallery',
 		children: [
 			{ label: 'Gallery 1', href: '/photo-gallery/gallery-1' },
-			{ label: 'Gallery 2', href: '/photo-gallery/gallery-2' },
-			{ label: 'Gallery 3', href: '/photo-gallery/gallery-3' },
-			{ label: 'Gallery 4', href: '/photo-gallery/gallery-4' }
+			{ label: 'Gallery 2', href: '/photo-gallery/gallery-2' }
 		]
 	},
 	{
@@ -72,16 +70,22 @@ export type GalleryLink = { slug: string; title: string };
 /**
  * Photo Gallery children come from the CMS, so galleries added, renamed or
  * reordered there show up in the nav without a code change.
+ *
+ * `galleries` is undefined on the 404 fallback page: GitHub Pages serves
+ * 404.html for unknown URLs, and there is no layout data to load for them.
+ * The Photo Gallery item then becomes a plain link rather than a dropdown.
  */
-export function navWithGalleries(galleries: GalleryLink[]): NavItem[] {
+export function navWithGalleries(galleries: GalleryLink[] | undefined): NavItem[] {
 	return navItems.map((item) =>
 		item.href === '/photo-gallery'
 			? {
 					...item,
-					children: galleries.map((g) => ({
-						label: g.title,
-						href: `/photo-gallery/${g.slug}`
-					}))
+					children: galleries?.length
+						? galleries.map((g) => ({
+								label: g.title,
+								href: `/photo-gallery/${g.slug}`
+							}))
+						: undefined
 				}
 			: item
 	);

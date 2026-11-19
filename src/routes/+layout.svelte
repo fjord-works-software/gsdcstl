@@ -8,10 +8,10 @@
 
 	let { children, data } = $props();
 
-	const items = $derived(navWithGalleries(data.galleries));
+	const items = $derived(navWithGalleries(data?.galleries));
 </script>
 
-<div class="min-h-screen flex flex-col bg-gradient-to-b from-primary-dark/10 to-stone-50">
+<div class="min-h-screen flex flex-col bg-linear-to-b from-primary-dark/10 to-stone-50">
 	<Header />
 	<div class="hidden md:block">
 		<NavMenu {items} />

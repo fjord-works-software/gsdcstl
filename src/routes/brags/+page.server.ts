@@ -1,6 +1,6 @@
 import type { PageServerLoad } from './$types';
 import matter from 'gray-matter';
-import { marked } from 'marked';
+import { marked } from '$lib/markdown';
 
 const files = import.meta.glob('../../../content/brags/*.md', {
 	query: '?raw',

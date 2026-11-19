@@ -44,6 +44,7 @@ collections:
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Revision Note, name: revision_note, widget: string, hint: "e.g. Revision: 02/01/2020 · Adopted: 03/27/2020" }
+          - { label: By-Laws PDF, name: pdf, widget: file, media_folder: /static/club-info, public_folder: /club-info, hint: "The full signed by-laws document offered by the Download PDF button" }
           - { label: Content, name: body, widget: markdown }
 
       - label: Club Contacts
@@ -125,14 +126,77 @@ collections:
         file: content/pages/show-premium.md
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Content, name: body, widget: markdown }
+          - { label: Notice Title, name: notice_title, widget: string, required: false, hint: "e.g. ⚠ Venue Change. Leave the notice blank to hide the box." }
+          - { label: Notice, name: notice, widget: string, required: false, hint: "Highlighted box at the top of the page. **bold** is allowed." }
+          - { label: Heading, name: heading, widget: string, required: false }
+          - label: Schedule
+            name: schedule
+            widget: list
+            required: false
+            label_singular: Show
+            summary: "{{fields.date}} — {{fields.show}}"
+            fields:
+              - { label: Date & Time, name: date, widget: string, hint: "e.g. Friday 5/9/25 AM" }
+              - { label: Show, name: show, widget: string, required: false }
+              - { label: Judge, name: judge, widget: string, required: false }
+              - { label: Event, name: event, widget: string, required: false }
+          - { label: Notes, name: body, widget: markdown, required: false, hint: "Shown below the schedule, e.g. temperament test and entry deadlines" }
+          - label: Show Secretary
+            name: secretary
+            widget: object
+            required: false
+            fields:
+              - { label: Name, name: name, widget: string, required: false }
+              - { label: Email, name: email, widget: string, required: false }
+              - { label: Phone, name: phone, widget: string, required: false }
+          - label: Buttons
+            name: buttons
+            widget: list
+            required: false
+            label_singular: Button
+            summary: "{{fields.label}}"
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Link, name: url, widget: string }
 
       - label: Event Results
         name: event-results
         file: content/pages/event-results.md
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Content, name: body, widget: markdown }
+          - { label: Heading, name: heading, widget: string, required: false, hint: "e.g. May 11 & 12, 2019 Specialty Shows" }
+          - { label: Results PDF, name: results_pdf, widget: file, required: false, media_folder: /static/events, public_folder: /events }
+          - label: Shows
+            name: shows
+            widget: list
+            required: false
+            label_singular: Show
+            summary: "{{fields.show}} — {{fields.judge}}"
+            fields:
+              - { label: Show, name: show, widget: string, hint: "e.g. Saturday 5/11/19 PM" }
+              - { label: Judge, name: judge, widget: string, required: false }
+              - label: Placements
+                name: placements
+                widget: list
+                required: false
+                label_singular: Placement
+                summary: "{{fields.title}} — {{fields.dog}}"
+                fields:
+                  - { label: Award, name: title, widget: string, hint: "e.g. Best of Breed" }
+                  - { label: Dog, name: dog, widget: string }
+                  - { label: Sire, name: sire, widget: string, required: false }
+                  - { label: Dam, name: dam, widget: string, required: false }
+                  - { label: Breeders, name: breeders, widget: string, required: false }
+                  - { label: Owners, name: owners, widget: string, required: false }
+          - label: Photos
+            name: photos
+            widget: list
+            required: false
+            label_singular: Photo
+            summary: "{{fields.caption}}"
+            fields:
+              - { label: Image, name: image, widget: image }
+              - { label: Caption, name: caption, widget: string, hint: "Who/what is pictured. Also used as alt text." }
 
   - divider: true
 
@@ -198,7 +262,16 @@ collections:
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Subtitle, name: subtitle, widget: string }
-          - { label: Content, name: body, widget: markdown }
+          - label: Point System Classes
+            name: point_classes
+            widget: list
+            label_singular: Class
+            summary: "{{fields.label}}"
+            fields:
+              - { label: Label, name: label, widget: string, hint: "e.g. Class of 6+ entries:" }
+              - { label: Places, name: places, widget: list, field: { label: Place, name: place, widget: string, hint: "e.g. 1st place — 5 points" } }
+          - { label: Point System Note, name: points_note, widget: string, required: false }
+          - { label: Special Awards, name: special_awards, widget: list, required: false, field: { label: Award, name: award, widget: string } }
 
   - name: royal-hecht-years
     label: Royal Hecht Years
@@ -278,7 +351,16 @@ collections:
         file: content/pages/breeders.md
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Content, name: body, widget: markdown, hint: "List breeders and the disclaimer text" }
+          - label: Breeders
+            name: breeders
+            widget: list
+            label_singular: Breeder
+            summary: "{{fields.name}}"
+            fields:
+              - { label: Kennel Name, name: name, widget: string }
+              - { label: Website, name: url, widget: string, required: false }
+              - { label: Owners, name: owners, widget: string, required: false }
+          - { label: Disclaimer, name: body, widget: markdown, hint: "Shown in small print below the breeder list" }
 
       - label: Stud Dogs
         name: stud-dogs
@@ -300,7 +382,7 @@ collections:
               - { label: Dam, name: dam, widget: string, required: false }
               - { label: Owner, name: owner, widget: string }
               - { label: Email, name: email, widget: string }
-              - { label: Phone, name: phone, widget: string }
+              - { label: Phone, name: phone, widget: string, required: false }
               - { label: Notes, name: notes, widget: string, required: false }
 
       - label: Whelping Box
@@ -326,18 +408,51 @@ collections:
         fields:
           - { label: Title, name: title, widget: string }
           - { label: Subtitle, name: subtitle, widget: string }
-          - { label: Content, name: body, widget: markdown }
+          - label: Memorials
+            name: memorials
+            widget: list
+            label_singular: Memorial
+            summary: "{{fields.name}}"
+            fields:
+              - { label: Dog, name: name, widget: string, hint: "Registered name and call name" }
+              - { label: Dates, name: dates, widget: string, required: false, hint: "e.g. 08/01/2004 – 09/04/2014" }
+              - { label: Owner, name: owner, widget: string, required: false }
+          - { label: Footnote, name: body, widget: markdown, required: false, hint: "Small print at the bottom, e.g. how to add a memorial" }
 
       - label: Web Award
         name: web-award
         file: content/pages/web-award.md
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Content, name: body, widget: markdown }
+          - { label: Heading, name: heading, widget: string, required: false }
+          - label: Placings
+            name: placings
+            widget: list
+            label_singular: Placing
+            summary: "{{fields.club}}"
+            fields:
+              - { label: Club, name: club, widget: string }
+              - { label: Person, name: person, widget: string, required: false }
+              - { label: Highlight, name: highlight, widget: boolean, required: false, default: false, hint: "Bold this row (our club)" }
+              - { label: Note, name: note, widget: string, required: false, hint: "e.g. 🥈 Second Place" }
 
       - label: Veterinary Links
         name: veterinary-links
         file: content/pages/veterinary-links.md
         fields:
           - { label: Title, name: title, widget: string }
-          - { label: Content, name: body, widget: markdown }
+          - label: Sections
+            name: sections
+            widget: list
+            label_singular: Section
+            summary: "{{fields.heading}}"
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - label: Links
+                name: links
+                widget: list
+                label_singular: Link
+                summary: "{{fields.label}}"
+                fields:
+                  - { label: Label, name: label, widget: string }
+                  - { label: URL, name: url, widget: string, required: false, hint: "Web address, or /Documents/DogMedicine/<file>.pdf for an uploaded document" }

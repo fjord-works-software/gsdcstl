@@ -1,6 +1,6 @@
 import type { PageServerLoad } from './$types';
 import matter from 'gray-matter';
-import { marked } from 'marked';
+import { marked } from '$lib/markdown';
 import raw from '../../../content/pages/photo-gallery.md?raw';
 import { galleries } from '$lib/galleries';
 

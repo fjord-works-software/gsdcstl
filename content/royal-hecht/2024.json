@@ -1,0 +1,64 @@
+{
+  "year": 2024,
+  "date": "April 2025",
+  "chairperson": "Laura Marrocco",
+  "members": [
+    {
+      "name": "Rod and Pam Aman",
+      "awards": [
+        {
+          "category": "Award of Excellence (GSDCA), Dual Award Excellent (GSDCA), Rally Novice (AKC), Trick Dog Intermediate (AKC), Trick Dog Advanced (AKC)",
+          "detail": "GCH CH Frankenhaus Afterburner TC FDC CGC TKN \"Buck\""
+        }
+      ]
+    },
+    {
+      "name": "Steve Dobbins",
+      "awards": [
+        {
+          "category": "GSDCSTL Best Bred By / Royal Hecht",
+          "detail": "Cimarron's Angel Of The Morning \"Stella\""
+        },
+        {
+          "category": "ROM (GSDCA)",
+          "detail": "Cimarron's Dark Sarcasm \"Cassie\""
+        },
+        {
+          "category": "Champion (AKC)",
+          "detail": "Cimarron's Nothing Can Stop Me Now \"Shorty\""
+        },
+        {
+          "category": "Champion (AKC)",
+          "detail": "Cimarron's Swizzle \"Swizzle\""
+        }
+      ]
+    },
+    {
+      "name": "Laura Marrocco, Jayne Faupl",
+      "awards": [
+        {
+          "category": "Canine Good Citizen (AKC), Trick Dog Novice (AKC), Farm Dog Certification (AKC), Rally Novice (AKC), Temperament Certification (GSDCA)",
+          "detail": "Guardians Goldikova V Lauguin Tin Roof STR \"TwoTwo\""
+        }
+      ]
+    },
+    {
+      "name": "Laura Marrocco, Terry Rock (Tony Marrocco)",
+      "awards": [
+        {
+          "category": "Select Excellent (GSDCA)",
+          "detail": "GCH Faithrock's Wyatt Earp V Tin Roof TC RN CGC TKN \"Ruger\""
+        }
+      ]
+    },
+    {
+      "name": "Laura Shearin (Colton Shearin-Anderson)",
+      "awards": [
+        {
+          "category": "Champion (AKC)",
+          "detail": "Lauguin's Shasta \"Atlas\""
+        }
+      ]
+    }
+  ]
+}

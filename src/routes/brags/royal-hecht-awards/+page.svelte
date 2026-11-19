@@ -23,6 +23,28 @@
 	{/each}
 </div>
 
-<section class="bg-gray-50 border border-gray-200 rounded p-4 text-sm text-gray-700 max-w-2xl cms-content">
-	{@html data.body}
+<section class="bg-gray-50 border border-gray-200 rounded p-4 text-sm text-gray-700 max-w-2xl">
+	<h2 class="font-serif font-bold text-primary mb-3">Point System</h2>
+	<div class="grid grid-cols-2 gap-4 mb-4">
+		{#each data.pointClasses as pointClass}
+			<div>
+				<p class="font-semibold mb-1">{pointClass.label}</p>
+				<ul class="space-y-0.5">
+					{#each pointClass.places ?? [] as place}
+						<li>{place}</li>
+					{/each}
+				</ul>
+			</div>
+		{/each}
+	</div>
+	{#if data.pointsNote}<p class="text-gray-500 text-xs">{data.pointsNote}</p>{/if}
+
+	{#if data.specialAwards.length}
+		<h2 class="font-serif font-bold text-primary mt-4 mb-2">Special Awards</h2>
+		<ul class="space-y-1">
+			{#each data.specialAwards as award}
+				<li>{award}</li>
+			{/each}
+		</ul>
+	{/if}
 </section>

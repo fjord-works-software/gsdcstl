@@ -1,5 +1,5 @@
 import matter from 'gray-matter';
-import { marked } from 'marked';
+import { marked } from '$lib/markdown';
 import type { Photo } from '$lib/photos';
 
 export type Gallery = {

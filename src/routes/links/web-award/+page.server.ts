@@ -1,9 +1,14 @@
 import type { PageServerLoad } from './$types';
 import matter from 'gray-matter';
-import { marked } from 'marked';
 import raw from '../../../../content/pages/web-award.md?raw';
 
+type Placing = { club: string; person?: string; highlight?: boolean; note?: string };
+
 export const load: PageServerLoad = () => {
-	const { data, content } = matter(raw);
-	return { title: data.title as string, body: marked.parse(content) as string };
+	const { data } = matter(raw);
+	return {
+		title: data.title as string,
+		heading: (data.heading ?? '') as string,
+		placings: (data.placings ?? []) as Placing[]
+	};
 };

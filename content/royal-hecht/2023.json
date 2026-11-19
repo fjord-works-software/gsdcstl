@@ -1,0 +1,70 @@
+{
+  "year": 2023,
+  "date": "April 16, 2024",
+  "chairperson": "Laura Marrocco and Linda Van Vickle",
+  "members": [
+    {
+      "name": "Rod and Pam Aman",
+      "awards": [
+        {
+          "category": "Grand Champion (AKC), Farm Dog Certification (AKC), National Select Excellent (GSDCA)",
+          "detail": "CH Frankenhaus Afterburner \"Buck\""
+        }
+      ]
+    },
+    {
+      "name": "Linda Vanvickle, Terry Rock",
+      "awards": [
+        {
+          "category": "Farm Dog Certification (AKC)",
+          "detail": "CH Faithrock's Maverick \"Bruno\""
+        }
+      ]
+    },
+    {
+      "name": "Laura Shearin, Jayne Faupl",
+      "awards": [
+        {
+          "category": "Champion (AKC), Temperament Certification (GSDCA)",
+          "detail": "Guardian's Thief Of My Heart V Rochill Lauguin \"Villian\""
+        }
+      ]
+    },
+    {
+      "name": "Gail and Butch Stiefferman (Tom Schneider, Jamie Stevens)",
+      "awards": [
+        {
+          "category": "Champion (AKC)",
+          "detail": "Schneiderhof's Sorcerer Stone \"Stoney\""
+        }
+      ]
+    },
+    {
+      "name": "Steve Dobbins",
+      "awards": [
+        {
+          "category": "GSDCSTL Best Bred By / Royal Hecht",
+          "detail": "Cimarron's Angel Of The Morning \"Stella\""
+        }
+      ]
+    },
+    {
+      "name": "Laura Marrocco, Jayne Faupl",
+      "awards": [
+        {
+          "category": "GSDCSTL Best Puppy",
+          "detail": "Guardians Goldikova V Lauguin Tin Roof \"TwoTwo\""
+        }
+      ]
+    },
+    {
+      "name": "Gail Rutter (Karen Schmaltz)",
+      "awards": [
+        {
+          "category": "ROM (GSDCA)",
+          "detail": "CH Hylock's Sho N'Tell HT TC \"Tessa\""
+        }
+      ]
+    }
+  ]
+}

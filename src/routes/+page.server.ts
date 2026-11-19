@@ -1,6 +1,6 @@
 import type { PageServerLoad } from './$types';
 import matter from 'gray-matter';
-import { marked } from 'marked';
+import { marked } from '$lib/markdown';
 import { asset } from '$app/paths';
 import type { Asset } from '$app/types';
 import raw from '../../content/pages/home.md?raw';

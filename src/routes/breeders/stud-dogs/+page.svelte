@@ -26,7 +26,7 @@
 				{#if dog.dam}<div class="flex gap-2"><dt class="font-semibold w-28 shrink-0">Dam:</dt><dd>{dog.dam}</dd></div>{/if}
 				<div class="flex gap-2"><dt class="font-semibold w-28 shrink-0">Owner:</dt><dd>{dog.owner}</dd></div>
 				<div class="flex gap-2"><dt class="font-semibold w-28 shrink-0">Email:</dt><dd><a href="mailto:{dog.email}" class="text-primary hover:underline">{dog.email}</a></dd></div>
-				<div class="flex gap-2"><dt class="font-semibold w-28 shrink-0">Phone:</dt><dd><a href="tel:{dog.phone.replace(/\D/g, '')}" class="text-primary hover:underline">{dog.phone}</a></dd></div>
+				{#if dog.phone}<div class="flex gap-2"><dt class="font-semibold w-28 shrink-0">Phone:</dt><dd><a href="tel:{dog.phone.replace(/\D/g, '')}" class="text-primary hover:underline">{dog.phone}</a></dd></div>{/if}
 			</dl>
 			{#if dog.notes}<p class="text-xs text-gray-500 mt-3">{dog.notes}</p>{/if}
 		</article>

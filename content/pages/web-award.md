@@ -1,10 +1,15 @@
 ---
 title: Web Award
+heading: 2013 GSDCA Regional Club Website Competition
+placings:
+  - club: GSDC of Northern Ohio
+    person: Birgit Rhoades
+  - club: GSDC of St. Louis
+    person: Steve Dobbins
+    highlight: true
+    note: "🥈 Second Place"
+  - club: GSDC of Minneapolis
+    person: Dave Bissonnette
+  - club: GSDC of Eastern Virginia
+    person: Gerry Colligan
 ---
-
-## 2013 GSDCA Regional Club Website Competition
-
-1. GSDC of Northern Ohio — Birgit Rhoades
-2. **GSDC of St. Louis — Steve Dobbins** (Second Place)
-3. GSDC of Minneapolis — Dave Bissonnette
-4. GSDC of Eastern Virginia — Gerry Colligan

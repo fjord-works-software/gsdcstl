@@ -35,4 +35,34 @@
 	.cms-content strong {
 		@apply font-semibold;
 	}
+	.cms-content h3 {
+		@apply text-base font-serif font-semibold text-primary-dark mb-1 mt-5;
+	}
+	.cms-content em {
+		@apply italic;
+	}
+	.cms-content img {
+		@apply block mx-auto my-4 max-w-full h-auto rounded shadow-sm;
+	}
+	.cms-content hr {
+		@apply my-8 border-0 border-t border-gray-200;
+	}
+	.cms-content blockquote {
+		@apply border-l-4 border-accent bg-amber-50 px-4 py-3 mb-4 rounded-r;
+	}
+	.cms-content blockquote p:last-child {
+		@apply mb-0;
+	}
+	.cms-content table {
+		@apply w-full text-sm border-collapse mb-6 border border-gray-200;
+	}
+	.cms-content th {
+		@apply bg-primary text-white text-left font-semibold px-3 py-2;
+	}
+	.cms-content td {
+		@apply border-t border-gray-200 px-3 py-2 align-top;
+	}
+	.cms-content tbody tr:nth-child(even) {
+		@apply bg-gray-50;
+	}
 }

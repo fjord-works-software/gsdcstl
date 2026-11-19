@@ -12,7 +12,7 @@
 <div class="flex items-start justify-between mb-4 gap-4">
 	<h1 class="text-2xl font-serif font-bold text-primary">{data.title}</h1>
 	<a
-		href={asset('/club-info/GSDCSTL-Bylaws-2.1.2020.pdf')}
+		href={asset(data.pdf)}
 		class="shrink-0 bg-primary text-white px-4 py-2 rounded text-sm hover:bg-primary-dark transition-colors"
 	>
 		Download PDF
