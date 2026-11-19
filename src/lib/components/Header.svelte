@@ -12,7 +12,7 @@
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 py-2 flex flex-wrap items-center justify-between gap-x-6 gap-y-1">
 		<span><span class="hidden sm:inline">Est. 1927 · </span>Serving the Greater St. Louis Area</span>
 		<a
-			href="https://www.facebook.com/German-Shepherd-Dog-Club-of-St-Louis-130909666994242/"
+			href="https://www.facebook.com/people/German-Shepherd-Dog-Club-of-St-Louis/61562833169770/"
 			target="_blank"
 			rel="noopener"
 			class="text-accent-light hover:underline">Facebook</a

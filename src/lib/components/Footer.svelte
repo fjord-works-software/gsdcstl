@@ -18,7 +18,7 @@
 				<li><a href={resolve('/calendar')} class="text-white hover:underline">Meetings</a></li>
 				<li>
 					<a
-						href="https://www.facebook.com/German-Shepherd-Dog-Club-of-St-Louis-130909666994242/"
+						href="https://www.facebook.com/people/German-Shepherd-Dog-Club-of-St-Louis/61562833169770/"
 						target="_blank"
 						rel="noopener"
 						class="text-white hover:underline">Facebook</a
