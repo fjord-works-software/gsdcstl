@@ -35,4 +35,4 @@ Our membership is made up of anyone interested in the German Shepherd Dog — br
 - [American Kennel Club (AKC)](https://www.akc.org)
 - [German Shepherd Dog Club of America (GSDCA)](https://www.gsdca.org)
 - [Orthopedic Foundation for Animals (OFA)](https://www.offa.org)
-- [GSDCSTL on Facebook](https://www.facebook.com/people/German-Shepherd-Dog-Club-of-St-Louis/61562833169770/-130909666994242/)
+- [GSDCSTL on Facebook](https://www.facebook.com/people/German-Shepherd-Dog-Club-of-St-Louis/61562833169770/)
