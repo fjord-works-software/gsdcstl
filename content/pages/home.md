@@ -14,6 +14,7 @@ meeting:
   time: 7:00 p.m.
   place: Pacific Lions Club, 319 W. Meramec, Pacific, MO 63069
 ---
+
 The members of the German Shepherd Dog Club of St. Louis, Inc. would like to introduce ourselves to you and invite you to come meet us.
 
 ## Who We Are
@@ -34,4 +35,4 @@ Our membership is made up of anyone interested in the German Shepherd Dog — br
 - [American Kennel Club (AKC)](https://www.akc.org)
 - [German Shepherd Dog Club of America (GSDCA)](https://www.gsdca.org)
 - [Orthopedic Foundation for Animals (OFA)](https://www.offa.org)
-- [GSDCSTL on Facebook](https://www.facebook.com/German-Shepherd-Dog-Club-of-St-Louis-130909666994242/)
+- [GSDCSTL on Facebook](https://www.facebook.com/people/German-Shepherd-Dog-Club-of-St-Louis/61562833169770/-130909666994242/)
