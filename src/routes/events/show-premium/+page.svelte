@@ -19,7 +19,7 @@
 {/if}
 
 {#if data.heading}
-	<h2 class="text-lg font-serif font-semibold text-primary-dark mb-3">{data.heading}</h2>
+	<h2 class="text-lg font-display font-semibold text-primary-dark mb-3">{data.heading}</h2>
 {/if}
 
 {#if data.schedule.length}
@@ -53,7 +53,7 @@
 {/if}
 
 {#if data.secretary?.name}
-	<h2 class="text-base font-serif font-semibold text-primary-dark mb-2">Show Secretary</h2>
+	<h2 class="text-base font-display font-semibold text-primary-dark mb-2">Show Secretary</h2>
 	<p class="text-sm text-gray-700 mb-6">
 		{data.secretary.name}
 		{#if data.secretary.email}

@@ -2,15 +2,29 @@
 	import { resolve } from '$app/paths';
 </script>
 
-<footer class="bg-primary-dark text-white py-6 px-6 text-center text-sm mt-auto relative overflow-hidden">
-	<img
-		src={resolve('/images/891512a4-fca3-43fd-9722-e189a1bc9315.png' as any)}
-		alt=""
-		aria-hidden="true"
-		class="absolute top-1/2 right-6 -translate-y-1/2 h-32 w-32 opacity-[0.08] pointer-events-none select-none"
-	/>
-	<p class="relative">© {new Date().getFullYear()} German Shepherd Dog Club of St. Louis <span class="text-primary-light"> · Built by <a href="https://fjordworkssoftware.com" class="hover:underline" target="_blank" rel="noopener">Fjord Works Software</a></span></p>
-	<p class="mt-1 relative">
-		<a href={resolve('/club-info/club-contacts')} class="text-accent-light hover:underline">Contact Us</a>
-	</p>
+<footer class="border-t-4 border-accent bg-primary-deep text-parchment-muted">
+	<div class="max-w-7xl mx-auto px-4 sm:px-6 py-14 flex flex-wrap justify-between gap-x-16 gap-y-8">
+		<div class="flex flex-[1_1_300px] flex-col gap-2.5">
+			<p class="font-display text-[22px] font-bold text-white">Visitors and German Shepherds are welcome!</p>
+			<p class="text-[15px]">
+				© {new Date().getFullYear()} German Shepherd Dog Club of St. Louis, Inc. · Built by
+				<a href="https://fjordworkssoftware.com" class="underline-offset-2 hover:underline" target="_blank" rel="noopener">Fjord Works Software</a>
+			</p>
+		</div>
+		<nav aria-label="Footer">
+			<ul class="flex flex-wrap gap-x-7 gap-y-3 text-[15px]">
+				<li><a href={resolve('/club-info/club-contacts')} class="text-white hover:underline">Club Contacts</a></li>
+				<li><a href={resolve('/club-info/constitution-by-laws')} class="text-white hover:underline">Constitution &amp; By-Laws</a></li>
+				<li><a href={resolve('/calendar')} class="text-white hover:underline">Meetings</a></li>
+				<li>
+					<a
+						href="https://www.facebook.com/German-Shepherd-Dog-Club-of-St-Louis-130909666994242/"
+						target="_blank"
+						rel="noopener"
+						class="text-white hover:underline">Facebook</a
+					>
+				</li>
+			</ul>
+		</nav>
+	</div>
 </footer>

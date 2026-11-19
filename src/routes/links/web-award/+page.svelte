@@ -12,7 +12,7 @@
 <PageHeader title={data.title} />
 
 {#if data.heading}
-	<h2 class="text-base font-serif font-semibold text-primary-dark mb-3">{data.heading}</h2>
+	<h2 class="text-base font-display font-semibold text-primary-dark mb-3">{data.heading}</h2>
 {/if}
 <ol class="list-decimal pl-6 space-y-1 text-gray-700">
 	{#each data.placings as p}

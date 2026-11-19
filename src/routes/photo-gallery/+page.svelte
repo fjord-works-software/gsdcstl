@@ -16,7 +16,7 @@
 	{@html data.body}
 </div>
 
-<h2 class="text-lg font-serif font-semibold text-primary-dark mb-2 mt-6">Photo Galleries</h2>
+<h2 class="text-lg font-display font-semibold text-primary-dark mb-2 mt-6">Photo Galleries</h2>
 {#if data.galleries.length === 0}
 	<p class="text-gray-400 text-sm italic">No galleries yet.</p>
 {:else}

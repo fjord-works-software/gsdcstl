@@ -1,10 +1,18 @@
 ---
 title: About Us
-slides:
-  - image: /images/slide790.jpg
-    alt: German Shepherd Dog Club of St. Louis
-  - image: /images/slide791.jpg
-    alt: German Shepherd Dog Club of St. Louis
+hero:
+  eyebrow: 1927 — 2027 · Our Centennial
+  heading: A century of companionship, excellence & heritage.
+  text: For nearly 100 years, the German Shepherd Dog Club of St. Louis has brought together breeders, competitors and dog lovers to protect and advance the breed. Come meet us.
+centennial:
+  heading: Centennial celebration — 2027
+  text: Celebrating 100 years of the German Shepherd Dog Club of St. Louis.
+  link_label: See upcoming events
+  link: /events
+meeting:
+  when: 3rd Tuesday of every month
+  time: 7:00 p.m.
+  place: Pacific Lions Club, 319 W. Meramec, Pacific, MO 63069
 ---
 The members of the German Shepherd Dog Club of St. Louis, Inc. would like to introduce ourselves to you and invite you to come meet us.
 

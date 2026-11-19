@@ -14,7 +14,7 @@
 <div class="space-y-8">
 	{#each data.studs as dog}
 		<article class="border border-gray-200 rounded p-5">
-			<h2 class="text-lg font-serif font-bold text-primary-dark mb-1">{dog.registered_name}</h2>
+			<h2 class="text-lg font-display font-bold text-primary-dark mb-1">{dog.registered_name}</h2>
 			<p class="text-gray-500 text-sm mb-3">
 				Call name: <strong>"{dog.call_name}"</strong>{#if dog.dob} · DOB: {dog.dob}{/if}
 			</p>

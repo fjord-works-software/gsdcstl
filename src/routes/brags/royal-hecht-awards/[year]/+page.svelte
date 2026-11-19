@@ -8,7 +8,7 @@
 	<title>{data.data.year} Royal Hecht Awards — GSDCSTL</title>
 </svelte:head>
 
-<h1 class="text-2xl font-serif font-bold text-primary mb-1">
+<h1 class="text-2xl font-display font-bold text-primary mb-1">
 	{data.data.year} Royal Hecht Member Awards
 </h1>
 

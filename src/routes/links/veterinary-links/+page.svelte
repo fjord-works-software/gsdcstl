@@ -14,7 +14,7 @@
 <div class="space-y-8 text-sm">
 	{#each data.sections as section}
 		<section>
-			<h2 class="text-base font-serif font-semibold text-primary-dark border-b border-gray-200 pb-1 mb-2">
+			<h2 class="text-base font-display font-semibold text-primary-dark border-b border-gray-200 pb-1 mb-2">
 				{section.heading}
 			</h2>
 			<ul class="space-y-1">

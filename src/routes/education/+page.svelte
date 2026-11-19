@@ -16,7 +16,7 @@
 </div>
 
 <div class="space-y-4">
-	<h2 class="text-lg font-serif font-semibold text-primary-dark">Educational Videos</h2>
+	<h2 class="text-lg font-display font-semibold text-primary-dark">Educational Videos</h2>
 	<div class="aspect-video max-w-2xl">
 		<iframe
 			src={data.video_url_1}

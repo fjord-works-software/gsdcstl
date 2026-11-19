@@ -17,7 +17,7 @@
 
 {#if data.heading || data.resultsPdf}
 	<div class="flex items-center justify-between mb-6">
-		<h2 class="text-lg font-serif font-semibold text-primary-dark">{data.heading}</h2>
+		<h2 class="text-lg font-display font-semibold text-primary-dark">{data.heading}</h2>
 		{#if data.resultsPdf}
 			<a
 				href={asset(data.resultsPdf as Asset)}
@@ -36,6 +36,6 @@
 </div>
 
 {#if data.photos.length}
-	<h2 class="text-lg font-serif font-semibold text-primary-dark mt-8 mb-4">Photos</h2>
+	<h2 class="text-lg font-display font-semibold text-primary-dark mt-8 mb-4">Photos</h2>
 	<PhotoGallery photos={data.photos} />
 {/if}

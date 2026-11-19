@@ -17,15 +17,30 @@ collections:
         name: home
         file: content/pages/home.md
         fields:
-          - { label: Title, name: title, widget: string }
-          - label: Banner Slides
-            name: slides
-            widget: list
-            label_singular: Slide
-            summary: "{{fields.alt}}"
+          - { label: Title, name: title, widget: string, hint: "Heading of the About section" }
+          - label: Banner
+            name: hero
+            widget: object
             fields:
-              - { label: Image, name: image, widget: image }
-              - { label: Alt Text, name: alt, widget: string, hint: "Describes the image for screen readers" }
+              - { label: Small Line Above Heading, name: eyebrow, widget: string, required: false }
+              - { label: Heading, name: heading, widget: string, hint: "An & in the heading is shown in gold" }
+              - { label: Text, name: text, widget: text }
+          - label: Centennial Strip
+            name: centennial
+            widget: object
+            hint: "The gold strip under the banner. Update the text as centennial events are announced."
+            fields:
+              - { label: Heading, name: heading, widget: string }
+              - { label: Text, name: text, widget: string }
+              - { label: Link Text, name: link_label, widget: string, required: false }
+              - { label: Link, name: link, widget: string, required: false, hint: "A page on this site, e.g. /events, or a full web address" }
+          - label: Meetings
+            name: meeting
+            widget: object
+            fields:
+              - { label: When, name: when, widget: string, hint: "e.g. 3rd Tuesday of every month" }
+              - { label: Time, name: time, widget: string, hint: "e.g. 7:00 p.m." }
+              - { label: Place, name: place, widget: string, hint: "Name and full street address, used for the directions link" }
           - { label: Content, name: body, widget: markdown }
 
   - name: club-info

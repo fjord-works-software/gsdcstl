@@ -22,15 +22,15 @@
 	}
 </script>
 
-<div class="bg-primary-dark md:hidden border-b-4 border-accent">
+<div class="xl:hidden">
 	<button
 		onclick={() => (open = !open)}
-		class="w-full flex items-center justify-between px-4 py-3 text-white"
+		class="flex h-12 w-12 items-center justify-center rounded-full bg-white/10 text-white ring-1 ring-white/15 hover:bg-white/15"
 		aria-expanded={open}
-		aria-label="Toggle navigation menu"
+		aria-controls="mobile-menu"
+		aria-label={open ? 'Close menu' : 'Open menu'}
 	>
-		<span class="font-serif text-sm font-semibold">Menu</span>
-		<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+		<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 			{#if open}
 				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
 			{:else}
@@ -40,42 +40,55 @@
 	</button>
 
 	{#if open}
-		<ul transition:slide={{ duration: 200 }} class="border-t border-primary">
-			{#each items as item}
-				<li class="border-b border-primary last:border-b-0">
-					{#if item.href && item.children}
+		<nav
+			id="mobile-menu"
+			aria-label="Main"
+			transition:slide={{ duration: 200 }}
+			class="absolute inset-x-0 top-full px-4 sm:px-6 pb-4"
+		>
+			<ul class="rounded-3xl bg-white p-2 shadow-xl ring-1 ring-black/5">
+				{#each items as item}
+					<li>
 						<div class="flex items-stretch">
-							<a
-								href={resolve(item.href as any)}
-								onclick={close}
-								class="flex-1 px-4 py-2.5 text-white text-sm hover:bg-primary"
-							>
-								{item.label}
-							</a>
-							<button
-								onclick={() => toggle(item.label)}
-								class="px-3 py-2.5 text-white hover:bg-primary border-l border-primary"
-								aria-label="Expand {item.label} submenu"
-							>
-								<svg
-									class="w-4 h-4 transition-transform"
-									class:rotate-180={expanded.has(item.label)}
-									fill="none"
-									stroke="currentColor"
-									viewBox="0 0 24 24"
+							{#if item.href}
+								<a
+									href={resolve(item.href as any)}
+									onclick={close}
+									class="flex-1 rounded-2xl px-4 py-3 font-medium text-ink hover:bg-sage"
 								>
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-								</svg>
-							</button>
+									{item.label}
+								</a>
+							{:else}
+								<span class="flex-1 px-4 py-3 font-medium text-ink">{item.label}</span>
+							{/if}
+							{#if item.children}
+								<button
+									onclick={() => toggle(item.label)}
+									class="rounded-2xl px-4 text-ink hover:bg-sage"
+									aria-expanded={expanded.has(item.label)}
+									aria-label="Show {item.label} pages"
+								>
+									<svg
+										class="w-5 h-5 transition-transform"
+										class:rotate-180={expanded.has(item.label)}
+										fill="none"
+										stroke="currentColor"
+										viewBox="0 0 24 24"
+										aria-hidden="true"
+									>
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+									</svg>
+								</button>
+							{/if}
 						</div>
-						{#if expanded.has(item.label)}
-							<ul transition:slide={{ duration: 150 }} class="bg-primary">
+						{#if item.children && expanded.has(item.label)}
+							<ul transition:slide={{ duration: 150 }} class="mb-1 ml-4 border-l-2 border-sage pl-2">
 								{#each item.children as child}
 									<li>
 										<a
 											href={resolve(child.href as any)}
 											onclick={close}
-											class="block px-8 py-2 text-white text-sm hover:bg-primary-dark"
+											class="block rounded-2xl px-4 py-2.5 text-muted hover:bg-sage hover:text-ink"
 										>
 											{child.label}
 										</a>
@@ -83,48 +96,18 @@
 								{/each}
 							</ul>
 						{/if}
-					{:else if item.href}
-						<a
-							href={resolve(item.href as any)}
-							onclick={close}
-							class="block px-4 py-2.5 text-white text-sm hover:bg-primary"
-						>
-							{item.label}
-						</a>
-					{:else}
-						<button
-							onclick={() => toggle(item.label)}
-							class="w-full flex items-center justify-between px-4 py-2.5 text-white text-sm hover:bg-primary"
-						>
-							{item.label}
-							<svg
-								class="w-4 h-4 transition-transform"
-								class:rotate-180={expanded.has(item.label)}
-								fill="none"
-								stroke="currentColor"
-								viewBox="0 0 24 24"
-							>
-								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-							</svg>
-						</button>
-						{#if expanded.has(item.label) && item.children}
-							<ul transition:slide={{ duration: 150 }} class="bg-primary">
-								{#each item.children as child}
-									<li>
-										<a
-											href={resolve(child.href as any)}
-											onclick={close}
-											class="block px-8 py-2 text-white text-sm hover:bg-primary-dark"
-										>
-											{child.label}
-										</a>
-									</li>
-								{/each}
-							</ul>
-						{/if}
-					{/if}
+					</li>
+				{/each}
+				<li class="p-2">
+					<a
+						href={resolve('/club-info/club-membership')}
+						onclick={close}
+						class="block rounded-full bg-accent px-5 py-3 text-center font-semibold text-primary-dark hover:bg-accent-light"
+					>
+						Join Us
+					</a>
 				</li>
-			{/each}
-		</ul>
+			</ul>
+		</nav>
 	{/if}
 </div>

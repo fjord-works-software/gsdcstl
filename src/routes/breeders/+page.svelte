@@ -33,7 +33,7 @@
 	</p>
 {/if}
 
-<h2 class="text-lg font-serif font-semibold text-primary-dark mb-2 mt-6">Breeder Resources</h2>
+<h2 class="text-lg font-display font-semibold text-primary-dark mb-2 mt-6">Breeder Resources</h2>
 <ul class="space-y-1 text-sm">
 	<li><a href={resolve('/breeders/stud-dogs')} class="text-primary hover:underline">Stud Dogs</a></li>
 	<li><a href={resolve('/breeders/whelping-box')} class="text-primary hover:underline">Whelping Box</a></li>

@@ -1,26 +1,30 @@
 <script lang="ts">
 	import './layout.css';
+	import { page } from '$app/state';
 	import Header from '$lib/components/Header.svelte';
-	import NavMenu from '$lib/components/NavMenu.svelte';
-	import MobileNav from '$lib/components/MobileNav.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import { navWithGalleries } from '$lib/nav';
 
 	let { children, data } = $props();
 
 	const items = $derived(navWithGalleries(data?.galleries));
+
+	// The homepage lays out its own full-width sections; every other page sits in a card.
+	const isHome = $derived(page.route.id === '/');
 </script>
 
-<div class="min-h-screen flex flex-col bg-linear-to-b from-primary-dark/10 to-stone-50">
-	<Header />
-	<div class="hidden md:block">
-		<NavMenu {items} />
-	</div>
-	<MobileNav {items} />
-	<main class="flex-1 max-w-5xl mx-auto w-full px-4 py-6">
-		<div class="bg-white shadow-md rounded-lg px-6 py-8">
+<div class="min-h-screen flex flex-col bg-cream">
+	<Header {items} />
+	{#if isHome}
+		<main class="flex-1">
 			{@render children()}
-		</div>
-	</main>
+		</main>
+	{:else}
+		<main class="flex-1 max-w-5xl mx-auto w-full px-4 sm:px-6 pt-4 pb-20">
+			<div class="rounded-[28px] bg-white px-6 py-8 sm:px-12 sm:py-12">
+				{@render children()}
+			</div>
+		</main>
+	{/if}
 	<Footer />
 </div>

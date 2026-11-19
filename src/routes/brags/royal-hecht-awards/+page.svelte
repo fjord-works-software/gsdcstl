@@ -24,7 +24,7 @@
 </div>
 
 <section class="bg-gray-50 border border-gray-200 rounded p-4 text-sm text-gray-700 max-w-2xl">
-	<h2 class="font-serif font-bold text-primary mb-3">Point System</h2>
+	<h2 class="font-display font-bold text-primary mb-3">Point System</h2>
 	<div class="grid grid-cols-2 gap-4 mb-4">
 		{#each data.pointClasses as pointClass}
 			<div>
@@ -40,7 +40,7 @@
 	{#if data.pointsNote}<p class="text-gray-500 text-xs">{data.pointsNote}</p>{/if}
 
 	{#if data.specialAwards.length}
-		<h2 class="font-serif font-bold text-primary mt-4 mb-2">Special Awards</h2>
+		<h2 class="font-display font-bold text-primary mt-4 mb-2">Special Awards</h2>
 		<ul class="space-y-1">
 			{#each data.specialAwards as award}
 				<li>{award}</li>

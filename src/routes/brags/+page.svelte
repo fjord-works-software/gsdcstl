@@ -30,7 +30,7 @@
 	{/each}
 </div>
 
-<h2 class="text-lg font-serif font-semibold text-primary-dark mb-2 mt-10">More Brags</h2>
+<h2 class="text-lg font-display font-semibold text-primary-dark mb-2 mt-10">More Brags</h2>
 <ul class="space-y-1 text-sm">
 	<li><a href={resolve('/brags/hall-of-fame')} class="text-primary hover:underline">Hall of Fame</a></li>
 	<li><a href={resolve('/brags/wag-n-tongue')} class="text-primary hover:underline">Wag 'N' Tongue Newsletter</a></li>

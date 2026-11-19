@@ -1,24 +1,36 @@
 @import 'tailwindcss';
 
 @theme {
-	--color-primary: #4f6951;
-	--color-primary-dark: #3b4e3d;
+	/* Forest green, deepened from the original #4f6951 */
+	--color-primary: #2e4a36;
+	--color-primary-dark: #1c3022;
 	--color-primary-light: #7c9c7f;
+	--color-sage: #e3ebdf;
+	--color-cream: #f6f3ec;
+	/* Gold from the centennial logo; accent-dark is the text-safe shade on light grounds */
 	--color-accent: #c4922a;
-	--color-accent-light: #e8b96a;
-	--font-family-serif: 'Playfair Display', Georgia, serif;
+	--color-accent-dark: #8a5f12;
+	--color-accent-light: #e8c27a;
+	/* Darkest green, for the top bar and footer */
+	--color-primary-deep: #13221a;
+	/* Light text on the dark green header, hero and footer */
+	--color-parchment: #eef2ea;
+	--color-parchment-muted: #cfdccb;
+	--color-ink: #26302a;
+	--color-muted: #4a544d;
+	--font-display: 'Bricolage Grotesque', system-ui, sans-serif;
+	--font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
 }
 
 @layer base {
 	body {
-		font-family: 'Inter', system-ui, -apple-system, sans-serif;
-		color: #374151;
+		@apply bg-cream font-sans text-ink;
 	}
 }
 
 @layer components {
 	.cms-content h2 {
-		@apply text-lg font-serif font-semibold text-primary-dark mb-2 mt-6;
+		@apply text-xl font-display font-bold text-primary-dark mb-2 mt-8;
 	}
 	.cms-content p {
 		@apply mb-4;
@@ -30,25 +42,25 @@
 		@apply list-decimal pl-6 mb-4 space-y-2;
 	}
 	.cms-content a {
-		@apply text-primary hover:underline;
+		@apply text-primary font-medium underline decoration-primary-light/50 underline-offset-2 hover:decoration-primary;
 	}
 	.cms-content strong {
 		@apply font-semibold;
 	}
 	.cms-content h3 {
-		@apply text-base font-serif font-semibold text-primary-dark mb-1 mt-5;
+		@apply text-lg font-display font-bold text-primary-dark mb-1 mt-6;
 	}
 	.cms-content em {
 		@apply italic;
 	}
 	.cms-content img {
-		@apply block mx-auto my-4 max-w-full h-auto rounded shadow-sm;
+		@apply block mx-auto my-6 max-w-full h-auto rounded-2xl;
 	}
 	.cms-content hr {
 		@apply my-8 border-0 border-t border-gray-200;
 	}
 	.cms-content blockquote {
-		@apply border-l-4 border-accent bg-amber-50 px-4 py-3 mb-4 rounded-r;
+		@apply bg-sage px-5 py-4 mb-4 rounded-2xl;
 	}
 	.cms-content blockquote p:last-child {
 		@apply mb-0;
